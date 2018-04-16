@@ -5,10 +5,7 @@ let gameName = "spotlight";
 
  if(gameName == "spotlight") {
     // 聚光灯游戏
-    let config: any = {
-        
-    };
-    new SpotlightShowPicture(config);
+    new SpotlightShowPicture();
 }
 // else if(gameName == "spider") {
 //     // 蜘蛛游戏

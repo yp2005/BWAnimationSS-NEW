@@ -2,10 +2,19 @@
 import Stage = Laya.Stage;
 import WebGL   = Laya.WebGL;
 import Sprite = Laya.Sprite;
-class SpotlightShowPicture {
-    public static spotlightShowPictureMain: SpotlightShowPictureMain; // 主界面
-    constructor()
+class DragAnimal {
+    public static dragAnimalMain: DragAnimalMain; // 主界面
+    public static gameConfig: any; // 游戏配置
+    constructor(config: any)
     {
+        // // 如果没有传入配置，使用默认配置
+        // if(!config) {
+        //     config = {
+               
+        //     };
+        // }
+        // DragAnimal.gameConfig = config;
+
         // 初始化舞台设置
 		Laya.init(1024, 768, WebGL);
 		Laya.stage.alignV = Stage.ALIGN_MIDDLE;
@@ -16,7 +25,7 @@ class SpotlightShowPicture {
         // 加载游戏资源
         let resArray: any[] = [
             {url: "res/atlas/common.atlas", type: Laya.Loader.ATLAS},
-            {url: "res/atlas/SpotlightShowPicture.atlas", type: Laya.Loader.ATLAS},
+            {url: "res/atlas/DragAnimal.atlas", type: Laya.Loader.ATLAS},
             // {url: "template/Text/TextBox.png", type: Laya.Loader.IMAGE},
             // {url: "template/ButtonTab/btn_LargeTabButton_Middle.png", type: Laya.Loader.IMAGE}
         ];
@@ -32,28 +41,28 @@ class SpotlightShowPicture {
         Laya.SoundManager.playSound("res/audio/spotlight-bg.wav", 0);
         // ff字体加载完再加载主页面
         Laya.timer.once(100, this, function() {
-            SpotlightShowPicture.spotlightShowPictureMain = new SpotlightShowPictureMain();
-            SpotlightShowPicture.spotlightShowPictureMain.replayBtn.on(Laya.Event.CLICK, this, this.restart);
-            Laya.stage.addChild(SpotlightShowPicture.spotlightShowPictureMain);
-            SpotlightShowPicture.spotlightShowPictureMain.on(Laya.Event.CLICK, this, this.start);
+            DragAnimal.dragAnimalMain = new DragAnimalMain();
+            DragAnimal.dragAnimalMain.replayBtn.on(Laya.Event.CLICK, this, this.restart);
+            Laya.stage.addChild(DragAnimal.dragAnimalMain);
+            DragAnimal.dragAnimalMain.on(Laya.Event.CLICK, this, this.start);
             
         });
     }
 
     // 游戏开始
     private start() {
-        SpotlightShowPicture.spotlightShowPictureMain.off(Laya.Event.CLICK, this, this.start);
-        SpotlightShowPicture.spotlightShowPictureMain.spotlight.visible = true;
-        SpotlightShowPicture.spotlightShowPictureMain.init(); 
+        DragAnimal.dragAnimalMain.off(Laya.Event.CLICK, this, this.start);
+        DragAnimal.dragAnimalMain.spotlight.visible = true;
+        DragAnimal.dragAnimalMain.init(); 
     }
 
     // 游戏重新开始
     private restart() {
-        if(SpotlightShowPicture.spotlightShowPictureMain.replayBtn.skin.indexOf("disabled") != -1) {
+        if(DragAnimal.dragAnimalMain.replayBtn.skin.indexOf("disabled") != -1) {
             return;
         }
-        SpotlightShowPicture.spotlightShowPictureMain.replayBtn.skin = "common/replay-disabled.png";
-        SpotlightShowPicture.spotlightShowPictureMain.reset();       
-        SpotlightShowPicture.spotlightShowPictureMain.init(); 
+        DragAnimal.dragAnimalMain.replayBtn.skin = "common/replay-disabled.png";
+        DragAnimal.dragAnimalMain.reset();       
+        DragAnimal.dragAnimalMain.init(); 
     }
 }
