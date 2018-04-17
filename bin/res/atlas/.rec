@@ -27,16 +27,23 @@ P 0E2F7B7E polly2.png
 P FBE32259 replay-abled.png
 P DD1A7E9B Replay-disabled.png
 D common
-P 96015AC9 btn_start.png
-P 5A05FAAE configBG.png
-P 18FAF2E0 gameover.png
-P BC4E3960 img_radio_checked.png
-P 838697A5 img_radio_notCheck.png
-P EF605369 replay-abled.png
-P 7F8CE93B replay-disabled.png
-P EA6A5058 replay.png
-P 6F2E1E3C setting.png
-P 5097AE90 well-done.png
+P A5C0C097 replay-abled.png
+P DD1A7E9B replay-disabled.png
+D DragAnimal
+P 6945C726 audio.png
+P 56C49648 bottom-bg.png
+P 3BEC608A crocodile1.png
+P 6A67CED7 crocodile2.png
+P CFD53277 elephant1.png
+P A6397FA8 elephant2.png
+R 1125A3F0 main-bg.png
+P 13537DDB snake1.png
+P DA8E6A32 snake2.png
+P ED547F88 snake3.png
+P 738C1FBA spider1.png
+P C0328952 spider2.png
+P F7A09E1A tiger1.png
+P FE4A1462 tigher2.png
 D RunRace
 R C61DA4E1 bg.png
 P 6A42E391 fans-cat-1.png
@@ -62,6 +69,14 @@ P F518F62A replay1.png
 P 90A8816D replay2.png
 P CD43D808 start.png
 P 9224410D winner.png
+D SpotlightShowPicture
+P A25810D8 crocodile.png
+P 9B78E7C7 elephant.png
+R 1AA38851 mainBG.png
+P 1A00E208 snake.png
+P A7A20FF5 spider.png
+P BA362AB4 spotlight.png
+P 03E925EE tiger.png
 D template
 D template/ButtonTab
 P AE499BA2 btn_LargeTabButton_Middle.png
