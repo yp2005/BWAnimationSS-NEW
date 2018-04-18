@@ -1,7 +1,7 @@
 // 程序入口，本工程仅用于切换各个动画进行测试
 
 // 游戏名称，修改这个变量值来切换不同游戏
-let gameName = "bubbleanimal"; 
+let gameName = "dragAnimal"; 
 
 if(gameName == "spotlight") {
     // 聚光灯游戏
@@ -12,4 +12,7 @@ else if(gameName == "runrace") {
 }
 else if(gameName == "bubbleanimal") {
     new BubbleAnimal();
+}
+else if(gameName == "dragAnimal") {
+    new DragAnimal();
 }
