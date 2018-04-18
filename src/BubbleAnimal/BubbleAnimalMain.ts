@@ -39,12 +39,14 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
             ani.x = 100+(i-1)*139;
             ani.y = 100;
             ani.image.on(Laya.Event.CLICK,this,this.click,[ani]);
+            ani.shake1();
             this.addChild(ani);
 
             let ani2= new Animal(ranArr2[i-1]);
             ani2.x = 100+(i-1)*139;
-            ani2.y = 220;
+            ani2.y = 250;
             ani2.image.on(Laya.Event.CLICK,this,this.click,[ani2]);
+            ani2.shake1();
             this.addChild(ani2);
 
             let btn2 = this.getChildByName("ani"+i+"-2") as Laya.Image;

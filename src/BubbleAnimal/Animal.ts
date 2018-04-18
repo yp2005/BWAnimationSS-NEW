@@ -3,11 +3,15 @@ class Animal extends Laya.Sprite {
     public brokenBubble:Laya.Image;
     public num: number;
     public isBroken:boolean;
+    public clicked:boolean;
+    public initY:number;
+    private curAni: Laya.Tween; // 当前正在播放的动画
 
     constructor(num:number = 1) {
         super(); 
         this.num = num;
         this.isBroken = false;
+        this.clicked = false;
 
         this.brokenBubble = new Laya.Image("BubbleAnimal/bubble2.png");
         this.brokenBubble.centerX = 0;
@@ -23,9 +27,14 @@ class Animal extends Laya.Sprite {
 
         this.addChild(this.brokenBubble);
         this.addChild(this.image);
+        // this.shake1();
     }
 
     public click(){
+        this.clicked = true;
+        if(this.curAni){
+            this.curAni.clear();
+        }
         this.image.skin = "BubbleAnimal/ani"+this.num+"-in1.png";
         this.brokenBubble.visible = true;
         Laya.timer.once(200,this,function(){
@@ -37,4 +46,17 @@ class Animal extends Laya.Sprite {
         });
     }
 
+    // 晃动
+    public shake1() {
+        if(!this.clicked) {
+            this.initY = this.y;
+            this.curAni = Laya.Tween.to(this, {y: this.initY - 10}, 1000, null, Laya.Handler.create(this, this.shake2));
+        }
+    }
+
+    private shake2() {
+        if(!this.clicked) {
+            this.curAni = Laya.Tween.to(this, {y: this.initY}, 1000, null, Laya.Handler.create(this, this.shake1));
+        }
+    }
 }
