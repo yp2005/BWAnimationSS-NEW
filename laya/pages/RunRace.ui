@@ -119,137 +119,77 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":346,"x":0,"skin":"RunRace/player1.png","name":"player1"},
+            "props":{"y":367,"x":5,"skin":"RunRace/player1.png","pivotY":20,"pivotX":-30,"name":"player1"},
             "nodeParent":1,
             "label":"Image(player1)",
             "isOpen":true,
-            "isDirectory":true,
+            "isDirectory":false,
             "isAniNode":true,
-            "hasChild":true,
+            "hasChild":false,
             "compId":16,
             "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":0,"x":0,"visible":false,"skin":"RunRace/winner.png","name":"winner"},
-                    "nodeParent":16,
-                    "label":"Image(winner)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":29,
-                    "child":[
-                        ]
-                }]
+                ]
         },
         {
             "x":15,
             "type":"Image",
-            "props":{"y":571,"x":0,"skin":"RunRace/player2.png","name":"player2"},
+            "props":{"y":589,"x":4,"skin":"RunRace/player2.png","pivotY":20,"pivotX":-30,"name":"player2"},
             "nodeParent":1,
             "label":"Image(player2)",
             "isOpen":true,
-            "isDirectory":true,
+            "isDirectory":false,
             "isAniNode":true,
-            "hasChild":true,
+            "hasChild":false,
             "compId":17,
             "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":0,"x":0,"visible":false,"skin":"RunRace/winner.png","name":"winner"},
-                    "nodeParent":17,
-                    "label":"Image(winner)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":31,
-                    "child":[
-                        ]
-                }]
+                ]
         },
         {
             "x":15,
             "type":"Image",
-            "props":{"y":275,"x":0,"skin":"RunRace/player3.png","name":"player3"},
+            "props":{"y":293,"x":3,"skin":"RunRace/player3.png","pivotY":15,"pivotX":-40,"name":"player3"},
             "nodeParent":1,
             "label":"Image(player3)",
             "isOpen":true,
-            "isDirectory":true,
+            "isDirectory":false,
             "isAniNode":true,
-            "hasChild":true,
+            "hasChild":false,
             "compId":18,
             "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":10,"x":10,"visible":false,"skin":"RunRace/winner.png","name":"winner"},
-                    "nodeParent":18,
-                    "label":"Image(winner)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":33,
-                    "child":[
-                        ]
-                }]
+                ]
         },
         {
             "x":15,
             "type":"Image",
-            "props":{"y":417,"x":0,"skin":"RunRace/player4.png","name":"player4"},
+            "props":{"y":441,"x":3,"skin":"RunRace/player4.png","pivotY":20,"pivotX":-40,"name":"player4"},
             "nodeParent":1,
             "label":"Image(player4)",
             "isOpen":true,
-            "isDirectory":true,
+            "isDirectory":false,
             "isAniNode":true,
-            "hasChild":true,
+            "hasChild":false,
             "compId":19,
             "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":0,"x":0,"visible":false,"skin":"RunRace/winner.png","name":"winner"},
-                    "nodeParent":19,
-                    "label":"Image(winner)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":34,
-                    "child":[
-                        ]
-                }]
+                ]
         },
         {
             "x":15,
             "type":"Image",
-            "props":{"y":512,"x":0,"skin":"RunRace/player5.png","name":"player5"},
+            "props":{"y":516,"x":6,"skin":"RunRace/player5.png","pivotX":-5,"name":"player5"},
             "nodeParent":1,
             "label":"Image(player5)",
             "isOpen":true,
-            "isDirectory":true,
+            "isDirectory":false,
             "isAniNode":true,
-            "hasChild":true,
+            "hasChild":false,
             "compId":20,
             "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":0,"x":0,"visible":false,"skin":"RunRace/winner.png","name":"winner"},
-                    "nodeParent":20,
-                    "label":"Image(winner)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":35,
-                    "child":[
-                        ]
-                }]
+                ]
         },
         {
             "x":15,
             "type":"Image",
-            "props":{"y":280,"x":910,"visible":false,"var":"winner","skin":"RunRace/winner.png"},
+            "props":{"y":280,"x":920,"visible":false,"var":"winner","skin":"RunRace/winner.png"},
             "nodeParent":1,
             "label":"Image(winner)",
             "isDirectory":false,

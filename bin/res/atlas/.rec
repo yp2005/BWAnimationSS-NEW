@@ -17,15 +17,17 @@ P DC78A8F5 ani4-2.png
 P D348B9D3 ani4-in1.png
 P D9905F34 ani4-in2.png
 P DD2508B0 ani5-1.png
+P 7A7EB4BB ani5-2.png
 P DF6F5162 ani5-in1.png
 P 66342165 ani5-in2.png
 R 7EDCDDA1 bg.png
+R 6B1C7DEE bg1.png
 P A659A790 bubble1.png
 P 47B74495 bubble2.png
 P 869A10D2 polly1.png
 P 0E2F7B7E polly2.png
 P FBE32259 replay-abled.png
-P DD1A7E9B Replay-disabled.png
+P DD1A7E9B replay-disabled.png
 D common
 P A5C0C097 replay-abled.png
 P DD1A7E9B replay-disabled.png

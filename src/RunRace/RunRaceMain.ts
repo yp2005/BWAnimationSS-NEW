@@ -28,7 +28,7 @@ class RunRaceMain extends ui.RunRaceUI {
         this.isGo = false;
         this.readygo.visible = false;
         this.winner.visible = false;
-        // this.resetLoop();
+        Laya.timer.clear(this,this.onLoop);
 
         for(var i = 1;i<6;i++){
             let player = this.getChildByName("player"+i) as Laya.Image;
@@ -80,6 +80,8 @@ class RunRaceMain extends ui.RunRaceUI {
 
     public btnCLick(num:number){
         // if(this.isGo)
+
+        Laya.SoundManager.playMusic("res/audio/19-run.mp3",1);
         let btn1 = this.btnbox.getChildByName("btn-player"+num) as Laya.Image;
         let btn2 = this.btnbox.getChildByName("btn2-player"+num) as Laya.Image;
         let player = this.getChildByName("player"+num) as Laya.Image;
@@ -88,7 +90,7 @@ class RunRaceMain extends ui.RunRaceUI {
             player.x = player.x+90;
             // console.log(player.x+"--"+(player.x > 850));
             if(player.x > 850){
-                this.winner.y = player.y-10;
+                this.winner.y = player.y-20;
                 this.winner.visible = true;
                 this.wingame();
                 return;
@@ -103,6 +105,7 @@ class RunRaceMain extends ui.RunRaceUI {
     public wingame(){
         this.speed = 25;
         this.resetLoop();
+        Laya.SoundManager.playMusic("res/audio/19-fans.mp3",1);
 
         for(var i = 1;i<6;i++){
             let player = this.getChildByName("player"+i) as Laya.Image;

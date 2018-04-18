@@ -2,8 +2,8 @@
 import Stage = Laya.Stage;
 import WebGL   = Laya.WebGL;
 import Sprite = Laya.Sprite;
-class RunRace {
-    public static runRaceMain: RunRaceMain; // 主界面
+class BubbleAnimal {
+    public static bubbleAnimalMain: BubbleAnimalMain; // 主界面
     constructor()
     {
         // 初始化舞台设置
@@ -16,8 +16,8 @@ class RunRace {
         // 加载游戏资源
         let resArray: any[] = [
             {url: "res/atlas/common.atlas", type: Laya.Loader.ATLAS},
-            {url: "res/atlas/RunRace.atlas", type: Laya.Loader.ATLAS},
-            {url: "RunRace/bg.png", type: Laya.Loader.IMAGE},
+            {url: "res/atlas/BubbleAnimal.atlas", type: Laya.Loader.ATLAS},
+            {url: "BubbleAnimal/bg1.png", type: Laya.Loader.IMAGE},
             {url: "template/Text/TextBox.png", type: Laya.Loader.IMAGE},
             {url: "template/ButtonTab/btn_LargeTabButton_Middle.png", type: Laya.Loader.IMAGE}
         ];
@@ -32,8 +32,8 @@ class RunRace {
         text.font = "ff";
         // ff字体加载完再加载主页面
         Laya.timer.once(100, this, function() {
-            RunRace.runRaceMain = new RunRaceMain();
-            Laya.stage.addChild(RunRace.runRaceMain);
+            BubbleAnimal.bubbleAnimalMain = new BubbleAnimalMain();
+            Laya.stage.addChild(BubbleAnimal.bubbleAnimalMain);
         });
     }
 }
