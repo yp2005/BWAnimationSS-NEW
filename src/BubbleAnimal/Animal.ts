@@ -4,6 +4,7 @@ class Animal extends Laya.Sprite {
     public num: number;
     public isBroken:boolean;
     public clicked:boolean;
+    public initX:number;
     public initY:number;
     private curAni: Laya.Tween; // 当前正在播放的动画
 
@@ -49,14 +50,19 @@ class Animal extends Laya.Sprite {
     // 晃动
     public shake1() {
         if(!this.clicked) {
+            this.initX = this.x;
             this.initY = this.y;
-            this.curAni = Laya.Tween.to(this, {y: this.initY - 10}, 1000, null, Laya.Handler.create(this, this.shake2));
+            let _x = (Math.random()-0.5)*20;
+            let _y = (Math.random()-0.5)*20;
+            this.curAni = Laya.Tween.to(this, {x:this.initX + _x,y: this.initY + _y}, 1000, null, Laya.Handler.create(this, this.shake2));
         }
     }
 
     private shake2() {
         if(!this.clicked) {
-            this.curAni = Laya.Tween.to(this, {y: this.initY}, 1000, null, Laya.Handler.create(this, this.shake1));
+            let _x = (Math.random()-0.5)*20;
+            let _y = (Math.random()-0.5)*20;
+            this.curAni = Laya.Tween.to(this, {x:this.initX + _x,y: this.initY + _y}, 1000, null, Laya.Handler.create(this, this.shake1));
         }
     }
 }

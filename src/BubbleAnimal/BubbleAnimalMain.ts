@@ -36,15 +36,15 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
 
         for(var i = 1;i<6;i++){
             let ani = new Animal(ranArr1[i-1]);
-            ani.x = 100+(i-1)*139;
-            ani.y = 100;
+            ani.x = 150+(i-1)*150;
+            ani.y = 150;
             ani.image.on(Laya.Event.CLICK,this,this.click,[ani]);
             ani.shake1();
             this.addChild(ani);
 
             let ani2= new Animal(ranArr2[i-1]);
-            ani2.x = 100+(i-1)*139;
-            ani2.y = 250;
+            ani2.x = 150+(i-1)*150;
+            ani2.y = 300;
             ani2.image.on(Laya.Event.CLICK,this,this.click,[ani2]);
             ani2.shake1();
             this.addChild(ani2);
@@ -106,9 +106,9 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
     public wingame(){
         Laya.SoundManager.playMusic("res/audio/21-pollyfly.mp3",1);
         // this.polly.visible = false;
-        Laya.Tween.to(this.polly,{x:500,y:250,scaleX:.3,scaleY:.3},2000,Laya.Ease.linearIn,null,100);
+        Laya.Tween.to(this.polly,{x:500,y:250,scaleX:.3,scaleY:.3},4000,Laya.Ease.linearIn,null,100);
         
-        Laya.timer.once(2000,this,function(){
+        Laya.timer.once(4000,this,function(){
             this.polly.visible =false;
         });
 
