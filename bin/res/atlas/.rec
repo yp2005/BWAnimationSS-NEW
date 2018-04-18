@@ -1,4 +1,5 @@
 D .
+R D6AFB7DA .gitignore
 D BubbleAnimal
 P 5EC3EB94 ani1-1.png
 P 675E67AE ani1-2.png
@@ -26,12 +27,14 @@ P A659A790 bubble1.png
 P 47B74495 bubble2.png
 P 869A10D2 polly1.png
 P 0E2F7B7E polly2.png
-P FBE32259 replay-abled.png
-P DD1A7E9B replay-disabled.png
+P DD1A7E9B replaydown.png
+P FBE32259 replayon.png
 D common
+R 6D88006A .DS_Store
 P A5C0C097 replay-abled.png
 P DD1A7E9B replay-disabled.png
 D DragAnimal
+R 6D88006A .DS_Store
 P 6945C726 audio.png
 P 56C49648 bottom-bg.png
 P 3BEC608A crocodile1.png
@@ -72,6 +75,7 @@ P 90A8816D replay2.png
 P CD43D808 start.png
 P 9224410D winner.png
 D SpotlightShowPicture
+R 6D88006A .DS_Store
 P A25810D8 crocodile.png
 P 9B78E7C7 elephant.png
 R 1AA38851 mainBG.png
@@ -80,6 +84,7 @@ P A7A20FF5 spider.png
 P BA362AB4 spotlight.png
 P 03E925EE tiger.png
 D template
+R 57C1A4A0 .DS_Store
 D template/ButtonTab
 P AE499BA2 btn_LargeTabButton_Middle.png
 D template/Text

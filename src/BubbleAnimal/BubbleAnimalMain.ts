@@ -4,9 +4,17 @@ import WebGL   = Laya.WebGL;
 import Sprite = Laya.Sprite;
 class BubbleAnimalMain extends ui.BubbleAnimalUI {
     public goneNum: number = 0;
+    private positionArr: Array<any>;
 
     constructor() {
         super(); 
+        this.positionArr = [
+            {x:42,y:421},
+            {x:216,y:459},
+            {x:419,y:498},
+            {x:602,y:495},
+            {x:721,y:382}
+        ]
         this.restart();
         for(var i = 1;i<6;i++){
             let btn1 = this.getChildByName("ani"+i+"-2") as Laya.Image;
@@ -43,7 +51,12 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
             let btn1 = this.getChildByName("ani"+i+"-1") as Laya.Image;
             btn1.visible = false;
             btn2.visible = false;
+            btn2.scale(1,1);
+            btn2.pos(this.positionArr[i-1].x,this.positionArr[i-1].y);
         }
+        this.polly.scale(1,1);
+        this.polly.pos(868,52);
+        this.polly.visible = true;
 
         this.replaydown.visible = true;
         this.replayon.visible = false;
@@ -76,18 +89,26 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
     public btnCLick(num:number){
         Laya.SoundManager.playMusic("res/audio/21-aniout.mp3",1);
         let btn1 = this.getChildByName("ani"+num+"-2") as Laya.Image;
-        btn1.visible =false;
-        this.goneNum++;
-        if(this.goneNum > 4){
-            Laya.timer.once(200,this,function(){
+        // btn1.visible =false;
+        Laya.Tween.to(btn1,{x:500,y:250,scaleX:.3,scaleY:.3},2000,Laya.Ease.linearIn,null,100);
+        
+        Laya.timer.once(2000,this,function(){
+            this.goneNum++;
+            btn1.visible =false;
+            if(this.goneNum > 4){
                 this.wingame();
-            });
-        }
+            }
+        });
     }
 
     public wingame(){
         Laya.SoundManager.playMusic("res/audio/21-pollyfly.mp3",1);
-        this.polly.visible = false;
+        // this.polly.visible = false;
+        Laya.Tween.to(this.polly,{x:500,y:250,scaleX:.3,scaleY:.3},2000,Laya.Ease.linearIn,null,100);
+        
+        Laya.timer.once(2000,this,function(){
+            this.polly.visible =false;
+        });
 
         this.replaydown.visible = false;
         this.replayon.visible = true;
