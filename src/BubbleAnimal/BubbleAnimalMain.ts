@@ -65,6 +65,7 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
     }
 
     public click(ani:Animal){
+        Laya.SoundManager.playMusic("res/audio/21-aniout.mp3",1);
         ani.image.skin = "BubbleAnimal/ani"+ani.num+"-in1.png";
         ani.brokenBubble.visible = true;
         Laya.timer.once(200,this,function(){
@@ -89,7 +90,6 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
     }
 
     public btnCLick(num:number){
-        Laya.SoundManager.playMusic("res/audio/21-aniout.mp3",1);
         let btn1 = this.getChildByName("ani"+num+"-2") as Laya.Image;
         // btn1.visible =false;
         Laya.Tween.to(btn1,{x:500,y:250,scaleX:.3,scaleY:.3},2000,Laya.Ease.linearIn,null,100);
@@ -104,16 +104,23 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
     }
 
     public wingame(){
-        Laya.SoundManager.playMusic("res/audio/21-pollyfly.mp3",1);
+        // Laya.SoundManager.playMusic("res/audio/21-pollyfly.mp3",1);
         // this.polly.visible = false;
+        // Laya.timer.frameLoop(5,this,this.onLoop);
         Laya.Tween.to(this.polly,{x:500,y:250,scaleX:.3,scaleY:.3},4000,Laya.Ease.linearIn,null,100);
         
         Laya.timer.once(4000,this,function(){
             this.polly.visible =false;
+            // Laya.timer.clear(this,this.onLoop);
         });
 
         this.replaydown.visible = false;
         this.replayon.visible = true;
+    }
+
+    public onLoop(){
+        let skin = (this.polly.skin == "BubbleAnimal/polly2.png") ? "BubbleAnimal/polly1.png" : "BubbleAnimal/polly2.png";
+        this.polly.skin = skin;
     }
 
     // 返回随机数组
