@@ -111,8 +111,6 @@ class DragAnimalMain extends ui.DragAnimalUI {
         animal.stopDrag();
         let x: number = animal.x;
         let y: number = animal.y;
-        let mx: number = Laya.stage.mouseX;
-        let my: number = Laya.stage.mouseY;
         if(animal.skin.indexOf("crocodile") != -1 && x + animal.width > 40 && x < 195 && y + animal.height > 676 && y < 733) {
             animal.visible = false;
             if(animal.skin.indexOf("crocodile1") != -1) {
