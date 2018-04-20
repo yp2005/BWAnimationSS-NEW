@@ -109,9 +109,11 @@ class DragAnimalMain extends ui.DragAnimalUI {
     // 拖拽动物结束
     private stopDragAnimal(animal: Laya.Image) {
         animal.stopDrag();
-        let x: number = Laya.stage.mouseX;
-        let y: number = Laya.stage.mouseY;
-        if(animal.skin.indexOf("crocodile") != -1 && x > 40 && y > 676 && x < 195 && y < 733) {
+        let x: number = animal.x;
+        let y: number = animal.y;
+        let mx: number = Laya.stage.mouseX;
+        let my: number = Laya.stage.mouseY;
+        if(animal.skin.indexOf("crocodile") != -1 && x + animal.width > 40 && x < 195 && y + animal.height > 676 && y < 733) {
             animal.visible = false;
             if(animal.skin.indexOf("crocodile1") != -1) {
                 this.crocodile1Small.removeSelf();
@@ -128,7 +130,7 @@ class DragAnimalMain extends ui.DragAnimalUI {
                 Laya.SoundManager.playSound("res/audio/drag-success.mp3", 1);
             }
         }
-        else if(animal.skin.indexOf("elephant") != -1 && x > 237 && y > 676 && x < 392 && y < 733) {
+        else if(animal.skin.indexOf("elephant") != -1 && x + animal.width > 237 && x < 392 && y + animal.height > 676 && y < 733) {
             animal.visible = false;
             if(animal.skin.indexOf("elephant1") != -1) {
                 this.elephant1Small.removeSelf();
@@ -145,7 +147,7 @@ class DragAnimalMain extends ui.DragAnimalUI {
                 Laya.SoundManager.playSound("res/audio/drag-success.mp3", 1);
             }
         }
-        else if(animal.skin.indexOf("snake") != -1 && x > 437 && y > 676 && x < 592 && y < 733) {
+        else if(animal.skin.indexOf("snake") != -1 && x + animal.width > 437 && x < 592 && y + animal.height > 676 && y < 733) {
             animal.visible = false;
             if(animal.skin.indexOf("snake1") != -1) {
                 this.snake1Small.removeSelf();
@@ -167,7 +169,7 @@ class DragAnimalMain extends ui.DragAnimalUI {
                 Laya.SoundManager.playSound("res/audio/drag-success.mp3", 1);
             }
         }
-        else if(animal.skin.indexOf("spider") != -1 && x > 635 && y > 676 && x < 790 && y < 733) {
+        else if(animal.skin.indexOf("spider") != -1 && x + animal.width > 625 && x < 790 && y + animal.height > 676 && y < 733) {
             animal.visible = false;
             if(animal.skin.indexOf("spider1") != -1) {
                 this.spider1Small.removeSelf();
@@ -184,7 +186,7 @@ class DragAnimalMain extends ui.DragAnimalUI {
                 Laya.SoundManager.playSound("res/audio/drag-success.mp3", 1);
             }
         }
-        else if(animal.skin.indexOf("tiger") != -1 && x > 833 && y > 676 && x < 988 && y < 733) {
+        else if(animal.skin.indexOf("tiger") != -1 && x + animal.width > 833 && x < 988 && y + animal.height > 676 && y < 733) {
             animal.visible = false;
             if(animal.skin.indexOf("tiger1") != -1) {
                 this.tiger1Small.removeSelf();
