@@ -8,6 +8,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+// 泡泡游戏泡泡类
 var Animal = /** @class */ (function (_super) {
     __extends(Animal, _super);
     function Animal(num) {
@@ -30,6 +31,7 @@ var Animal = /** @class */ (function (_super) {
         return _this;
         // this.shake1();
     }
+    // 被点击
     Animal.prototype.click = function () {
         this.clicked = true;
         if (this.curAni) {
@@ -45,7 +47,7 @@ var Animal = /** @class */ (function (_super) {
             });
         });
     };
-    // 晃动
+    // 飘来
     Animal.prototype.shake1 = function () {
         if (!this.clicked) {
             this.initX = this.x;
@@ -55,6 +57,7 @@ var Animal = /** @class */ (function (_super) {
             this.curAni = Laya.Tween.to(this, { x: this.initX + _x, y: this.initY + _y }, 1000, null, Laya.Handler.create(this, this.shake2));
         }
     };
+    // 飘去
     Animal.prototype.shake2 = function () {
         if (!this.clicked) {
             var _x = (Math.random() - 0.5) * 20;

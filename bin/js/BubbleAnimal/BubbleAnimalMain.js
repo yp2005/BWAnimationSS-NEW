@@ -8,7 +8,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-// 砸蛋游戏
+// 泡泡游戏
 var Stage = Laya.Stage;
 var WebGL = Laya.WebGL;
 var Sprite = Laya.Sprite;
@@ -16,7 +16,8 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
     __extends(BubbleAnimalMain, _super);
     function BubbleAnimalMain() {
         var _this = _super.call(this) || this;
-        _this.goneNum = 0;
+        _this.clickNum = 0; //泡泡爆了数量
+        _this.goneNum = 0; //动物离开的数量
         _this.positionArr = [
             { x: 42, y: 421 },
             { x: 216, y: 459 },
@@ -32,14 +33,17 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
         _this.replayon.on(Laya.Event.CLICK, _this, _this.restart);
         return _this;
     }
-    // 游戏开始
+    // 游戏重新开始
     BubbleAnimalMain.prototype.restart = function () {
         this.init();
     };
+    //初始化
     BubbleAnimalMain.prototype.init = function () {
+        this.clickNum = 0;
         this.goneNum = 0;
         var ranArr1 = this.getRandomArr(5);
         var ranArr2 = this.getRandomArr(5);
+        //生成10个泡泡
         for (var i = 1; i < 6; i++) {
             var ani = new Animal(ranArr1[i - 1]);
             ani.x = 150 + (i - 1) * 150;
@@ -60,14 +64,17 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
             btn2.scale(1, 1);
             btn2.pos(this.positionArr[i - 1].x, this.positionArr[i - 1].y);
         }
+        //鹦鹉归位
         this.polly.scale(1, 1);
         this.polly.pos(868, 52);
         this.polly.visible = true;
         this.replaydown.visible = true;
         this.replayon.visible = false;
     };
+    //泡泡爆破
     BubbleAnimalMain.prototype.click = function (ani) {
-        Laya.SoundManager.playMusic("res/audio/21-aniout.mp3", 1);
+        this.clickNum++;
+        Laya.SoundManager.playMusic("res/audio/21-anidown.mp3", 1);
         ani.image.skin = "BubbleAnimal/ani" + ani.num + "-in1.png";
         ani.brokenBubble.visible = true;
         Laya.timer.once(200, this, function () {
@@ -79,6 +86,7 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
             });
         });
     };
+    //更新地上动物
     BubbleAnimalMain.prototype.update = function (num) {
         var ani = this.getChildByName("ani" + num + "-1");
         if (ani.visible) {
@@ -90,9 +98,12 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
             ani.visible = true;
         }
     };
+    //地上动物离开
     BubbleAnimalMain.prototype.btnCLick = function (num) {
+        if (this.clickNum < 10)
+            return;
         var btn1 = this.getChildByName("ani" + num + "-2");
-        // btn1.visible =false;
+        Laya.SoundManager.playMusic("res/audio/21-aniout.mp3", 1);
         Laya.Tween.to(btn1, { x: 500, y: 250, scaleX: .3, scaleY: .3 }, 2000, Laya.Ease.linearIn, null, 100);
         Laya.timer.once(2000, this, function () {
             this.goneNum++;
@@ -102,18 +113,20 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
             }
         });
     };
+    //游戏结束
     BubbleAnimalMain.prototype.wingame = function () {
-        // Laya.SoundManager.playMusic("res/audio/21-pollyfly.mp3",1);
+        Laya.SoundManager.playMusic("res/audio/21-aniout.mp3", 1);
         // this.polly.visible = false;
-        Laya.timer.frameLoop(5, this, this.onLoop);
-        Laya.Tween.to(this.polly, { x: 500, y: 250, scaleX: .3, scaleY: .3 }, 4000, Laya.Ease.linearIn, null, 100);
+        // Laya.timer.frameLoop(5,this,this.onLoop);
+        Laya.Tween.to(this.polly, { x: 480, y: 200, scaleX: .3, scaleY: .3 }, 4000, Laya.Ease.linearIn, null, 100);
         Laya.timer.once(4000, this, function () {
             this.polly.visible = false;
-            Laya.timer.clear(this, this.onLoop);
+            // Laya.timer.clear(this,this.onLoop);
         });
         this.replaydown.visible = false;
         this.replayon.visible = true;
     };
+    //鹦鹉飞走动画loop
     BubbleAnimalMain.prototype.onLoop = function () {
         var skin = (this.polly.skin == "BubbleAnimal/polly2.png") ? "BubbleAnimal/polly1.png" : "BubbleAnimal/polly2.png";
         this.polly.skin = skin;

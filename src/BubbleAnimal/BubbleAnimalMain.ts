@@ -102,7 +102,7 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
     public btnCLick(num:number){
         if(this.clickNum < 10) return;
         let btn1 = this.getChildByName("ani"+num+"-2") as Laya.Image;
-        Laya.SoundManager.playMusic("res/audio/21-aniout.mp3",1);
+        // Laya.SoundManager.playMusic("res/audio/21-aniout.mp3",1);
         Laya.Tween.to(btn1,{x:500,y:250,scaleX:.3,scaleY:.3},2000,Laya.Ease.linearIn,null,100);
         
         Laya.timer.once(2000,this,function(){
@@ -116,10 +116,10 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
 
     //游戏结束
     public wingame(){
-        Laya.SoundManager.playMusic("res/audio/21-aniout.mp3",1);
+        // Laya.SoundManager.playMusic("res/audio/21-aniout.mp3",1);
         // this.polly.visible = false;
         // Laya.timer.frameLoop(5,this,this.onLoop);
-        Laya.Tween.to(this.polly,{x:500,y:250,scaleX:.3,scaleY:.3},4000,Laya.Ease.linearIn,null,100);
+        Laya.Tween.to(this.polly,{x:460,y:180,scaleX:.3,scaleY:.3},4000,Laya.Ease.linearIn,null,100);
         
         Laya.timer.once(4000,this,function(){
             this.polly.visible =false;

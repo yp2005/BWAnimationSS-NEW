@@ -8,7 +8,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-// 砸蛋游戏
+// 赛跑游戏
 var Stage = Laya.Stage;
 var WebGL = Laya.WebGL;
 var Sprite = Laya.Sprite;
@@ -16,7 +16,7 @@ var RunRaceMain = /** @class */ (function (_super) {
     __extends(RunRaceMain, _super);
     function RunRaceMain() {
         var _this = _super.call(this) || this;
-        _this.speed = 50;
+        _this.speed = 50; // 拉拉队速度
         _this.isGo = false;
         _this.restart();
         for (var i = 1; i < 6; i++) {
@@ -26,11 +26,12 @@ var RunRaceMain = /** @class */ (function (_super) {
         _this.replayon.on(Laya.Event.CLICK, _this, _this.restart);
         return _this;
     }
-    // 游戏开始
+    // 游戏重新开始
     RunRaceMain.prototype.restart = function () {
         this.init();
         this.bg.on(Laya.Event.CLICK, this, this.start);
     };
+    //初始化
     RunRaceMain.prototype.init = function () {
         this.speed = 50;
         this.isGo = false;
@@ -48,6 +49,7 @@ var RunRaceMain = /** @class */ (function (_super) {
         this.replaydown.visible = true;
         this.replayon.visible = false;
     };
+    //游戏开始
     RunRaceMain.prototype.start = function () {
         this.readygo.visible = true;
         this.bg.off(Laya.Event.CLICK, this, this.restart);
@@ -66,6 +68,7 @@ var RunRaceMain = /** @class */ (function (_super) {
         this.replaydown.visible = true;
         this.replayon.visible = false;
     };
+    //拉拉队动画loop
     RunRaceMain.prototype.onLoop = function () {
         for (var i = 1; i < 7; i++) {
             var fans = this.getChildByName("fans" + i);
@@ -79,6 +82,7 @@ var RunRaceMain = /** @class */ (function (_super) {
             fans.skin = skin;
         }
     };
+    //动物跑按钮
     RunRaceMain.prototype.btnCLick = function (num) {
         // if(this.isGo)
         Laya.SoundManager.playMusic("res/audio/19-run.mp3", 1);
@@ -100,6 +104,7 @@ var RunRaceMain = /** @class */ (function (_super) {
             btn2.visible = false;
         });
     };
+    //胜利
     RunRaceMain.prototype.wingame = function () {
         this.speed = 25;
         this.resetLoop();
@@ -116,6 +121,7 @@ var RunRaceMain = /** @class */ (function (_super) {
         this.replaydown.visible = false;
         this.replayon.visible = true;
     };
+    //重置拉拉队速度
     RunRaceMain.prototype.resetLoop = function () {
         Laya.timer.clear(this, this.onLoop);
         Laya.timer.frameLoop(this.speed, this, this.onLoop);
