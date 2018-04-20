@@ -8,11 +8,14 @@ if(gameName == "spotlight") {
     new SpotlightShowPicture();
 }
 else if(gameName == "runrace") {
+    //赛跑游戏
     new RunRace();
 }
 else if(gameName == "bubbleanimal") {
+    //泡泡游戏
     new BubbleAnimal();
 }
 else if(gameName == "dragAnimal") {
+    //拖拽游戏
     new DragAnimal();
 }

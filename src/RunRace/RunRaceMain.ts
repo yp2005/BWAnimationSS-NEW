@@ -1,9 +1,9 @@
-// 砸蛋游戏
+// 赛跑游戏
 import Stage = Laya.Stage;
 import WebGL   = Laya.WebGL;
 import Sprite = Laya.Sprite;
 class RunRaceMain extends ui.RunRaceUI {
-    public speed: number = 50; 
+    public speed: number = 50; // 拉拉队速度
     public isGo: boolean = false;
 
     constructor() {
@@ -17,12 +17,13 @@ class RunRaceMain extends ui.RunRaceUI {
         this.replayon.on(Laya.Event.CLICK,this,this.restart);
     }
 
-    // 游戏开始
+    // 游戏重新开始
     private restart() {
         this.init();
         this.bg.on(Laya.Event.CLICK,this,this.start);
     }
 
+    //初始化
     public init(){
         this.speed = 50;
         this.isGo = false;
@@ -44,6 +45,7 @@ class RunRaceMain extends ui.RunRaceUI {
         this.replayon.visible = false;
     }
 
+    //游戏开始
     public start(){
         this.readygo.visible = true;
         this.bg.off(Laya.Event.CLICK,this,this.restart);
@@ -65,6 +67,7 @@ class RunRaceMain extends ui.RunRaceUI {
         this.replayon.visible = false;
     }
 
+    //拉拉队动画loop
     public onLoop(){
         for(var i = 1;i<7;i++){
             let fans = this.getChildByName("fans"+i) as Laya.Image;
@@ -78,6 +81,7 @@ class RunRaceMain extends ui.RunRaceUI {
         }
     }
 
+    //动物跑按钮
     public btnCLick(num:number){
         // if(this.isGo)
 
@@ -102,6 +106,7 @@ class RunRaceMain extends ui.RunRaceUI {
         });
     }
 
+    //胜利
     public wingame(){
         this.speed = 25;
         this.resetLoop();
@@ -122,6 +127,7 @@ class RunRaceMain extends ui.RunRaceUI {
         this.replayon.visible = true;
     }
 
+    //重置拉拉队速度
     public resetLoop(){
         Laya.timer.clear(this,this.onLoop);
         Laya.timer.frameLoop(this.speed,this,this.onLoop);

@@ -1,11 +1,12 @@
+// 泡泡游戏泡泡类
 class Animal extends Laya.Sprite {
-    public image:Laya.Image;
-    public brokenBubble:Laya.Image;
-    public num: number;
-    public isBroken:boolean;
-    public clicked:boolean;
-    public initX:number;
-    public initY:number;
+    public image:Laya.Image; //主图
+    public brokenBubble:Laya.Image; //泡泡爆破瞬间的图
+    public num: number; //序号
+    public isBroken:boolean; //已爆
+    public clicked:boolean; //已点击
+    public initX:number; //原来的x轴坐标
+    public initY:number; //原来的y轴坐标
     private curAni: Laya.Tween; // 当前正在播放的动画
 
     constructor(num:number = 1) {
@@ -31,6 +32,7 @@ class Animal extends Laya.Sprite {
         // this.shake1();
     }
 
+    // 被点击
     public click(){
         this.clicked = true;
         if(this.curAni){
@@ -47,7 +49,7 @@ class Animal extends Laya.Sprite {
         });
     }
 
-    // 晃动
+    // 飘来
     public shake1() {
         if(!this.clicked) {
             this.initX = this.x;
@@ -58,6 +60,7 @@ class Animal extends Laya.Sprite {
         }
     }
 
+    // 飘去
     private shake2() {
         if(!this.clicked) {
             let _x = (Math.random()-0.5)*20;
