@@ -4,6 +4,7 @@ class DragAnimalMain extends ui.DragAnimalUI {
     private partAnimals: Laya.Image[] = new Array<Laya.Image>(); // 可以交换位置的动物图片
     private partAnimalsPos: any[] = new Array<any>(); // 可以交换位置的动物图片的坐标
     private otherAnimalsPos: any[] = new Array<any>(); // 不可以交换位置的动物图片的坐标
+    private curAnimal: Laya.Image; // 当前拖动的动物
     private curAnimalXY: any; // 当前拖拽的动物的原始坐标
     private dragedNumber: number = 0; // 拖拽完成的动物数量
     constructor() {
@@ -14,6 +15,7 @@ class DragAnimalMain extends ui.DragAnimalUI {
     // 重置游戏为初始状态
     public reset() {
         this.dragedNumber = 0;
+        this.curAnimal = null;
         this.hideSmallPic();
         // 打乱动物坐标
         this.crocodile1.pos(this.otherAnimalsPos[0].x, this.otherAnimalsPos[0].y);
@@ -62,6 +64,7 @@ class DragAnimalMain extends ui.DragAnimalUI {
         this.animals.push(this.tiger2);
         this.partAnimals.push(this.tiger2);
         this.partAnimalsPos.push({x: this.tiger2.x, y: this.tiger2.y});
+        
         for(let animal of this.animals) {
             animal.on(Laya.Event.MOUSE_DOWN, this, this.startDragAnimal, [animal]);
             animal.on(Laya.Event.MOUSE_UP, this, this.stopDragAnimal, [animal]);
@@ -80,6 +83,11 @@ class DragAnimalMain extends ui.DragAnimalUI {
         });
         this.tigerAudio.on(Laya.Event.CLICK, this, function() {
             Laya.SoundManager.playSound("res/audio/tiger.wav", 1);
+        });
+        Laya.stage.on(Laya.Event.MOUSE_OUT, this, function() {
+           if(this.curAnimal) {
+               this.stopDragAnimal(this.curAnimal);
+           } 
         });
     }
 
@@ -102,12 +110,14 @@ class DragAnimalMain extends ui.DragAnimalUI {
     private startDragAnimal(animal: Laya.Image) {
         animal.removeSelf();
         this.addChild(animal);
+        this.curAnimal = animal;
         this.curAnimalXY = {x: animal.x, y: animal.y};
         animal.startDrag();
     }
 
     // 拖拽动物结束
     private stopDragAnimal(animal: Laya.Image) {
+        this.curAnimal = null;
         animal.stopDrag();
         let x: number = animal.x;
         let y: number = animal.y;
