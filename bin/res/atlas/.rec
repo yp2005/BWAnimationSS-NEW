@@ -26,6 +26,7 @@ P A659A790 bubble1.png
 P 47B74495 bubble2.png
 P 869A10D2 polly1.png
 P 0E2F7B7E polly2.png
+P 3ACFED32 polly3.png
 P DD1A7E9B replaydown.png
 P FBE32259 replayon.png
 D common
@@ -38,14 +39,14 @@ P 3BEC608A crocodile1.png
 P 6A67CED7 crocodile2.png
 P CFD53277 elephant1.png
 P A6397FA8 elephant2.png
-R 1125A3F0 main-bg.png
+R EEAAAC6D main-bg.png
 P 13537DDB snake1.png
 P DA8E6A32 snake2.png
 P ED547F88 snake3.png
 P 738C1FBA spider1.png
 P C0328952 spider2.png
 P F7A09E1A tiger1.png
-P FE4A1462 tigher2.png
+P FE4A1462 tiger2.png
 D RunRace
 R C61DA4E1 bg.png
 P 6A42E391 fans-cat-1.png

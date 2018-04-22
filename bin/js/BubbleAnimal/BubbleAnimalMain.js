@@ -103,7 +103,7 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
         if (this.clickNum < 10)
             return;
         var btn1 = this.getChildByName("ani" + num + "-2");
-        Laya.SoundManager.playMusic("res/audio/21-aniout.mp3", 1);
+        // Laya.SoundManager.playMusic("res/audio/21-aniout.mp3",1);
         Laya.Tween.to(btn1, { x: 500, y: 250, scaleX: .3, scaleY: .3 }, 2000, Laya.Ease.linearIn, null, 100);
         Laya.timer.once(2000, this, function () {
             this.goneNum++;
@@ -115,20 +115,20 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
     };
     //游戏结束
     BubbleAnimalMain.prototype.wingame = function () {
-        Laya.SoundManager.playMusic("res/audio/21-aniout.mp3", 1);
+        // Laya.SoundManager.playMusic("res/audio/21-aniout.mp3",1);
         // this.polly.visible = false;
-        // Laya.timer.frameLoop(5,this,this.onLoop);
-        Laya.Tween.to(this.polly, { x: 480, y: 200, scaleX: .3, scaleY: .3 }, 4000, Laya.Ease.linearIn, null, 100);
+        Laya.timer.frameLoop(5, this, this.onLoop);
+        Laya.Tween.to(this.polly, { x: 460, y: 180, scaleX: .3, scaleY: .3 }, 4000, Laya.Ease.linearIn, null, 100);
         Laya.timer.once(4000, this, function () {
             this.polly.visible = false;
-            // Laya.timer.clear(this,this.onLoop);
+            Laya.timer.clear(this, this.onLoop);
         });
         this.replaydown.visible = false;
         this.replayon.visible = true;
     };
     //鹦鹉飞走动画loop
     BubbleAnimalMain.prototype.onLoop = function () {
-        var skin = (this.polly.skin == "BubbleAnimal/polly2.png") ? "BubbleAnimal/polly1.png" : "BubbleAnimal/polly2.png";
+        var skin = (this.polly.skin == "BubbleAnimal/polly2.png") ? "BubbleAnimal/polly3.png" : "BubbleAnimal/polly2.png";
         this.polly.skin = skin;
     };
     // 返回随机数组

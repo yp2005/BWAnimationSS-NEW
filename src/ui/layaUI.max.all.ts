@@ -8,7 +8,7 @@ module ui {
 		public replaydown:Laya.Image;
 		public polly:Laya.Image;
 
-        public static  uiView:any ={"type":"View","props":{"width":1024,"height":768},"child":[{"type":"Image","props":{"width":1024,"var":"bg","skin":"BubbleAnimal/bg1.png","height":768}},{"type":"Image","props":{"y":700,"x":845,"var":"replayon","skin":"BubbleAnimal/replayon.png"}},{"type":"Image","props":{"y":700,"x":845,"var":"replaydown","skin":"BubbleAnimal/replaydown.png"}},{"type":"Image","props":{"y":52,"x":868,"var":"polly","skin":"BubbleAnimal/polly2.png"}},{"type":"Image","props":{"y":421,"x":42,"skin":"BubbleAnimal/ani1-2.png","name":"ani1-2"}},{"type":"Image","props":{"y":459,"x":216,"skin":"BubbleAnimal/ani2-2.png","name":"ani2-2"}},{"type":"Image","props":{"y":498,"x":419,"skin":"BubbleAnimal/ani3-2.png","name":"ani3-2"}},{"type":"Image","props":{"y":495,"x":602,"skin":"BubbleAnimal/ani4-2.png","name":"ani4-2"}},{"type":"Image","props":{"y":382,"x":721,"skin":"BubbleAnimal/ani5-2.png","name":"ani5-2"}},{"type":"Image","props":{"y":453,"x":762,"skin":"BubbleAnimal/ani5-1.png","name":"ani5-1"}},{"type":"Image","props":{"y":482,"x":53,"skin":"BubbleAnimal/ani1-1.png","name":"ani1-1"}},{"type":"Image","props":{"y":505,"x":262,"skin":"BubbleAnimal/ani2-1.png","name":"ani2-1"}},{"type":"Image","props":{"y":565,"x":419,"skin":"BubbleAnimal/ani3-1.png","name":"ani3-1"}},{"type":"Image","props":{"y":559,"x":602,"skin":"BubbleAnimal/ani4-1.png","name":"ani4-1"}}]};
+        public static  uiView:any ={"type":"View","props":{"width":1024,"height":768},"child":[{"type":"Image","props":{"width":1024,"var":"bg","skin":"BubbleAnimal/bg1.png","height":768}},{"type":"Image","props":{"y":700,"x":845,"var":"replayon","skin":"BubbleAnimal/replayon.png"}},{"type":"Image","props":{"y":700,"x":845,"var":"replaydown","skin":"BubbleAnimal/replaydown.png"}},{"type":"Image","props":{"y":52,"x":936,"var":"polly","skin":"BubbleAnimal/polly3.png","pivotX":68}},{"type":"Image","props":{"y":421,"x":42,"skin":"BubbleAnimal/ani1-2.png","name":"ani1-2"}},{"type":"Image","props":{"y":459,"x":216,"skin":"BubbleAnimal/ani2-2.png","name":"ani2-2"}},{"type":"Image","props":{"y":498,"x":419,"skin":"BubbleAnimal/ani3-2.png","name":"ani3-2"}},{"type":"Image","props":{"y":495,"x":602,"skin":"BubbleAnimal/ani4-2.png","name":"ani4-2"}},{"type":"Image","props":{"y":382,"x":721,"skin":"BubbleAnimal/ani5-2.png","name":"ani5-2"}},{"type":"Image","props":{"y":453,"x":762,"skin":"BubbleAnimal/ani5-1.png","name":"ani5-1"}},{"type":"Image","props":{"y":482,"x":53,"skin":"BubbleAnimal/ani1-1.png","name":"ani1-1"}},{"type":"Image","props":{"y":505,"x":262,"skin":"BubbleAnimal/ani2-1.png","name":"ani2-1"}},{"type":"Image","props":{"y":565,"x":419,"skin":"BubbleAnimal/ani3-1.png","name":"ani3-1"}},{"type":"Image","props":{"y":559,"x":602,"skin":"BubbleAnimal/ani4-1.png","name":"ani4-1"}}]};
         constructor(){ super()}
         createChildren():void {
         
@@ -22,8 +22,36 @@ module ui {
 
 module ui {
     export class DragAnimalUI extends View {
+		public crocodileAudio:Laya.Image;
+		public elephantAudio:Laya.Image;
+		public snakeAudio:Laya.Image;
+		public spiderAudio:Laya.Image;
+		public tigerAudio:Laya.Image;
+		public replayBtn:Laya.Image;
+		public crocodile1:Laya.Image;
+		public crocodile2:Laya.Image;
+		public elephant1:Laya.Image;
+		public elephant2:Laya.Image;
+		public snake1:Laya.Image;
+		public snake2:Laya.Image;
+		public snake3:Laya.Image;
+		public spider1:Laya.Image;
+		public spider2:Laya.Image;
+		public tiger1:Laya.Image;
+		public tiger2:Laya.Image;
+		public crocodile1Small:Laya.Image;
+		public crocodile2Small:Laya.Image;
+		public elephant1Small:Laya.Image;
+		public elephant2Small:Laya.Image;
+		public snake1Small:Laya.Image;
+		public snake2Small:Laya.Image;
+		public snake3Small:Laya.Image;
+		public spider1Small:Laya.Image;
+		public spider2Small:Laya.Image;
+		public tiger1Small:Laya.Image;
+		public tiger2Small:Laya.Image;
 
-        public static  uiView:any ={"type":"View","props":{"width":1024,"height":768}};
+        public static  uiView:any ={"type":"View","props":{"width":1024,"height":768},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"DragAnimal/main-bg.png"}},{"type":"Image","props":{"y":666,"x":30,"skin":"DragAnimal/bottom-bg.png"}},{"type":"Image","props":{"y":666,"x":228,"skin":"DragAnimal/bottom-bg.png"}},{"type":"Image","props":{"y":666,"x":426,"skin":"DragAnimal/bottom-bg.png"}},{"type":"Image","props":{"y":666,"x":624,"skin":"DragAnimal/bottom-bg.png"}},{"type":"Image","props":{"y":666,"x":822,"skin":"DragAnimal/bottom-bg.png"}},{"type":"Image","props":{"y":672,"x":36,"var":"crocodileAudio","skin":"DragAnimal/audio.png"}},{"type":"Image","props":{"y":672,"x":234,"var":"elephantAudio","skin":"DragAnimal/audio.png"}},{"type":"Image","props":{"y":673,"x":433,"var":"snakeAudio","skin":"DragAnimal/audio.png"}},{"type":"Image","props":{"y":673,"x":632,"var":"spiderAudio","skin":"DragAnimal/audio.png"}},{"type":"Image","props":{"y":674,"x":829,"var":"tigerAudio","skin":"DragAnimal/audio.png"}},{"type":"Image","props":{"y":570,"x":858,"var":"replayBtn","skin":"common/replay-disabled.png"}},{"type":"Image","props":{"y":414,"x":520,"var":"crocodile1","skin":"DragAnimal/crocodile1.png"}},{"type":"Image","props":{"y":516,"x":678,"var":"crocodile2","skin":"DragAnimal/crocodile2.png"}},{"type":"Image","props":{"y":238,"x":109,"var":"elephant1","skin":"DragAnimal/elephant1.png"}},{"type":"Image","props":{"y":452,"x":265,"var":"elephant2","skin":"DragAnimal/elephant2.png"}},{"type":"Image","props":{"y":333,"x":447,"var":"snake1","skin":"DragAnimal/snake1.png"}},{"type":"Image","props":{"y":340,"x":755,"var":"snake2","skin":"DragAnimal/snake2.png"}},{"type":"Image","props":{"y":260,"x":288,"var":"snake3","skin":"DragAnimal/snake3.png"}},{"type":"Image","props":{"y":232,"x":751,"var":"spider1","skin":"DragAnimal/spider1.png"}},{"type":"Image","props":{"y":240,"x":879,"var":"spider2","skin":"DragAnimal/spider2.png"}},{"type":"Image","props":{"y":406,"x":66,"var":"tiger1","skin":"DragAnimal/tiger1.png"}},{"type":"Image","props":{"y":221,"x":535,"var":"tiger2","skin":"DragAnimal/tiger2.png"}},{"type":"Image","props":{"y":660,"x":67,"width":70,"var":"crocodile1Small","skin":"DragAnimal/crocodile1.png","height":68}},{"type":"Image","props":{"y":687,"x":118,"width":82,"var":"crocodile2Small","skin":"DragAnimal/crocodile2.png","height":34}},{"type":"Image","props":{"y":657,"x":261,"width":76,"var":"elephant1Small","skin":"DragAnimal/elephant1.png","height":79}},{"type":"Image","props":{"y":680,"x":326,"width":68,"var":"elephant2Small","skin":"DragAnimal/elephant2.png","height":45}},{"type":"Image","props":{"y":692,"x":507,"width":40,"var":"snake1Small","skin":"DragAnimal/snake1.png","height":45}},{"type":"Image","props":{"y":677,"x":464,"width":37,"var":"snake2Small","skin":"DragAnimal/snake2.png","height":45}},{"type":"Image","props":{"y":648,"x":513,"width":88,"var":"snake3Small","skin":"DragAnimal/snake3.png","height":59}},{"type":"Image","props":{"y":680,"x":667,"width":52,"var":"spider1Small","skin":"DragAnimal/spider1.png","height":51}},{"type":"Image","props":{"y":654,"x":710,"width":83,"var":"spider2Small","skin":"DragAnimal/spider2.png","height":85}},{"type":"Image","props":{"y":636,"x":905,"width":88,"var":"tiger1Small","skin":"DragAnimal/tiger1.png","height":81}},{"type":"Image","props":{"y":686,"x":859,"width":64,"var":"tiger2Small","skin":"DragAnimal/tiger2.png","height":50}}]};
         constructor(){ super()}
         createChildren():void {
         

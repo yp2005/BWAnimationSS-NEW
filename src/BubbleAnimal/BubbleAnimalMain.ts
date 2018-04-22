@@ -118,12 +118,12 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
     public wingame(){
         // Laya.SoundManager.playMusic("res/audio/21-aniout.mp3",1);
         // this.polly.visible = false;
-        // Laya.timer.frameLoop(5,this,this.onLoop);
+        Laya.timer.frameLoop(5,this,this.onLoop);
         Laya.Tween.to(this.polly,{x:460,y:180,scaleX:.3,scaleY:.3},4000,Laya.Ease.linearIn,null,100);
         
         Laya.timer.once(4000,this,function(){
             this.polly.visible =false;
-            // Laya.timer.clear(this,this.onLoop);
+            Laya.timer.clear(this,this.onLoop);
         });
 
         this.replaydown.visible = false;
@@ -132,7 +132,7 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
 
     //鹦鹉飞走动画loop
     public onLoop(){
-        let skin = (this.polly.skin == "BubbleAnimal/polly2.png") ? "BubbleAnimal/polly1.png" : "BubbleAnimal/polly2.png";
+        let skin = (this.polly.skin == "BubbleAnimal/polly2.png") ? "BubbleAnimal/polly3.png" : "BubbleAnimal/polly2.png";
         this.polly.skin = skin;
     }
 

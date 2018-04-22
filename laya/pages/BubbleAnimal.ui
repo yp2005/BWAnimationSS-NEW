@@ -54,7 +54,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":52,"x":936,"var":"polly","skin":"BubbleAnimal/polly2.png","pivotX":68},
+            "props":{"y":52,"x":936,"var":"polly","skin":"BubbleAnimal/polly3.png","pivotX":68},
             "nodeParent":1,
             "label":"Image(polly)",
             "isDirectory":false,
