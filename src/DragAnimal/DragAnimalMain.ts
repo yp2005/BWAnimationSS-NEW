@@ -17,16 +17,13 @@ class DragAnimalMain extends ui.DragAnimalUI {
         this.dragedNumber = 0;
         this.curAnimal = null;
         this.hideSmallPic();
-        // 打乱动物坐标
+        // 动物回到原位
         this.crocodile1.pos(this.otherAnimalsPos[0].x, this.otherAnimalsPos[0].y);
         this.crocodile2.pos(this.otherAnimalsPos[1].x, this.otherAnimalsPos[1].y);
         this.spider1.pos(this.otherAnimalsPos[2].x, this.otherAnimalsPos[2].y);
         this.spider2.pos(this.otherAnimalsPos[3].x, this.otherAnimalsPos[3].y);
-        let xy: any[] = JSON.parse(JSON.stringify(this.partAnimalsPos));
         for(let i: number = 0; i < 7; i++) {
-            let index: number = Math.floor(Math.random() * xy.length);
-            this.partAnimals[i].pos(xy[index].x, xy[index].y);
-            xy.splice(index, 1);
+            this.partAnimals[i].pos(this.partAnimalsPos[i].x, this.partAnimalsPos[i].y);
         }
         for(let animal of this.animals) {
             animal.visible = true;
