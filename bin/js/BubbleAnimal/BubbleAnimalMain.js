@@ -66,7 +66,7 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
         }
         //鹦鹉归位
         this.polly.scale(1, 1);
-        this.polly.pos(868, 52);
+        this.polly.pos(936, 52);
         this.polly.visible = true;
         this.replaydown.visible = true;
         this.replayon.visible = false;
@@ -103,7 +103,7 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
         if (this.clickNum < 10)
             return;
         var btn1 = this.getChildByName("ani" + num + "-2");
-        // Laya.SoundManager.playMusic("res/audio/21-aniout.mp3",1);
+        Laya.SoundManager.playMusic("res/audio/21-aniout.mp3", 1);
         Laya.Tween.to(btn1, { x: 500, y: 250, scaleX: .3, scaleY: .3 }, 2000, Laya.Ease.linearIn, null, 100);
         Laya.timer.once(2000, this, function () {
             this.goneNum++;
@@ -115,11 +115,11 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
     };
     //游戏结束
     BubbleAnimalMain.prototype.wingame = function () {
-        // Laya.SoundManager.playMusic("res/audio/21-aniout.mp3",1);
+        Laya.SoundManager.playMusic("res/audio/21-aniout.mp3", 1);
         // this.polly.visible = false;
         Laya.timer.frameLoop(5, this, this.onLoop);
-        Laya.Tween.to(this.polly, { x: 460, y: 180, scaleX: .3, scaleY: .3 }, 4000, Laya.Ease.linearIn, null, 100);
-        Laya.timer.once(4000, this, function () {
+        Laya.Tween.to(this.polly, { x: 430, y: 50, scaleX: .2, scaleY: .2 }, 2000, Laya.Ease.linearIn, null, 100);
+        Laya.timer.once(2000, this, function () {
             this.polly.visible = false;
             Laya.timer.clear(this, this.onLoop);
         });
