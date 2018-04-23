@@ -52,7 +52,7 @@ var RunRaceMain = /** @class */ (function (_super) {
     //游戏开始
     RunRaceMain.prototype.start = function () {
         this.readygo.visible = true;
-        this.bg.off(Laya.Event.CLICK, this, this.restart);
+        this.bg.off(Laya.Event.CLICK, this, this.start);
         Laya.SoundManager.playMusic("res/audio/19-readygo.wav", 1);
         Laya.timer.once(2000, this, function () {
             this.readygo.visible = false;
