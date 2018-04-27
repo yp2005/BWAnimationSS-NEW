@@ -47,7 +47,7 @@ class DragAnimalMain extends ui.DragAnimalUI {
         this.partAnimalsPos.push({x: this.snake1.x, y: this.snake1.y});
         this.animals.push(this.snake2);
         this.partAnimals.push(this.snake2);
-        this.partAnimalsPos.push({x: this.snake2.x, y: this.snake1.y});
+        this.partAnimalsPos.push({x: this.snake2.x, y: this.snake2.y});
         this.animals.push(this.snake3);
         this.partAnimals.push(this.snake3);
         this.partAnimalsPos.push({x: this.snake3.x, y: this.snake3.y});
@@ -67,19 +67,19 @@ class DragAnimalMain extends ui.DragAnimalUI {
             animal.on(Laya.Event.MOUSE_UP, this, this.stopDragAnimal, [animal]);
         }
         this.crocodileAudio.on(Laya.Event.CLICK, this, function() {
-            Laya.SoundManager.playSound("res/audio/crocodile.wav", 1);
+            Laya.SoundManager.playSound("res/audio/crocodile.mp3", 1);
         });
         this.elephantAudio.on(Laya.Event.CLICK, this, function() {
-            Laya.SoundManager.playSound("res/audio/elephant.wav", 1);
+            Laya.SoundManager.playSound("res/audio/elephant.mp3", 1);
         });
         this.snakeAudio.on(Laya.Event.CLICK, this, function() {
-            Laya.SoundManager.playSound("res/audio/snake.wav", 1);
+            Laya.SoundManager.playSound("res/audio/snake.mp3", 1);
         });
         this.spiderAudio.on(Laya.Event.CLICK, this, function() {
-            Laya.SoundManager.playSound("res/audio/spider.wav", 1);
+            Laya.SoundManager.playSound("res/audio/spider.mp3", 1);
         });
         this.tigerAudio.on(Laya.Event.CLICK, this, function() {
-            Laya.SoundManager.playSound("res/audio/tiger.wav", 1);
+            Laya.SoundManager.playSound("res/audio/tiger.mp3", 1);
         });
         Laya.stage.on(Laya.Event.MOUSE_OUT, this, function() {
            if(this.curAnimal) {
