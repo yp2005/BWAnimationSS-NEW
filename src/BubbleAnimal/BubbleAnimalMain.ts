@@ -102,6 +102,7 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
     public btnCLick(num:number){
         if(this.clickNum < 10) return;
         let btn1 = this.getChildByName("ani"+num+"-2") as Laya.Image;
+            btn1.off(Laya.Event.CLICK,this,this.btnCLick);
         Laya.SoundManager.playMusic("res/audio/21-aniout.mp3",1);
         Laya.Tween.to(btn1,{x:500,y:250,scaleX:.3,scaleY:.3},2000,Laya.Ease.linearIn,null,100);
         

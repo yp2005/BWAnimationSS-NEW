@@ -103,6 +103,7 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
         if (this.clickNum < 10)
             return;
         var btn1 = this.getChildByName("ani" + num + "-2");
+        btn1.off(Laya.Event.CLICK, this, this.btnCLick);
         Laya.SoundManager.playMusic("res/audio/21-aniout.mp3", 1);
         Laya.Tween.to(btn1, { x: 500, y: 250, scaleX: .3, scaleY: .3 }, 2000, Laya.Ease.linearIn, null, 100);
         Laya.timer.once(2000, this, function () {

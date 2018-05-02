@@ -1,5 +1,4 @@
 D .
-R D6AFB7DA .gitignore
 D BubbleAnimal
 P 5EC3EB94 ani1-1.png
 P 675E67AE ani1-2.png
@@ -31,25 +30,23 @@ P 3ACFED32 polly3.png
 P DD1A7E9B replaydown.png
 P FBE32259 replayon.png
 D common
-R 6D88006A .DS_Store
 P A5C0C097 replay-abled.png
 P DD1A7E9B replay-disabled.png
 D DragAnimal
-R 6D88006A .DS_Store
 P 6945C726 audio.png
 P 56C49648 bottom-bg.png
-P 3BEC608A crocodile1.png
-P 6A67CED7 crocodile2.png
-P CFD53277 elephant1.png
-P A6397FA8 elephant2.png
+P 8058F81F crocodile1.png
+P 657D053A crocodile2.png
+P F7759062 elephant1.png
+P 8FD72E2F elephant2.png
 R EEAAAC6D main-bg.png
-P 13537DDB snake1.png
-P DA8E6A32 snake2.png
-P ED547F88 snake3.png
-P 738C1FBA spider1.png
-P C0328952 spider2.png
-P F7A09E1A tiger1.png
-P FE4A1462 tiger2.png
+P 72E61C0B snake1.png
+P 73EA6602 snake2.png
+P 8DE7C966 snake3.png
+P 04F14DFA spider1.png
+P 797F5528 spider2.png
+P 9758B71D tiger1.png
+P ABDCDD3E tiger2.png
 D RunRace
 R C61DA4E1 bg.png
 P 6A42E391 fans-cat-1.png
@@ -76,7 +73,6 @@ P 90A8816D replay2.png
 P CD43D808 start.png
 P 9224410D winner.png
 D SpotlightShowPicture
-R 6D88006A .DS_Store
 P A25810D8 crocodile.png
 P 9B78E7C7 elephant.png
 R 1AA38851 mainBG.png
@@ -85,7 +81,6 @@ P A7A20FF5 spider.png
 P BA362AB4 spotlight.png
 P 03E925EE tiger.png
 D template
-R 57C1A4A0 .DS_Store
 D template/ButtonTab
 P AE499BA2 btn_LargeTabButton_Middle.png
 D template/Text
