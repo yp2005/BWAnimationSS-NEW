@@ -126,10 +126,10 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
         Laya.timer.once(2000,this,function(){
             this.polly.visible =false;
             Laya.timer.clear(this,this.onLoop);
+            this.replaydown.visible = false;
+            this.replayon.visible = true;
         });
 
-        this.replaydown.visible = false;
-        this.replayon.visible = true;
     }
 
     //鹦鹉飞走动画loop
