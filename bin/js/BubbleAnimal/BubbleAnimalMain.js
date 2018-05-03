@@ -26,16 +26,16 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
             { x: 721, y: 382 }
         ];
         _this.restart();
-        for (var i = 1; i < 6; i++) {
-            var btn1 = _this.getChildByName("ani" + i + "-2");
-            btn1.on(Laya.Event.CLICK, _this, _this.btnCLick, [i]);
-        }
         _this.replayon.on(Laya.Event.CLICK, _this, _this.restart);
         return _this;
     }
     // 游戏重新开始
     BubbleAnimalMain.prototype.restart = function () {
         this.init();
+        for (var i = 1; i < 6; i++) {
+            var btn1 = this.getChildByName("ani" + i + "-2");
+            btn1.on(Laya.Event.CLICK, this, this.btnCLick, [i]);
+        }
     };
     //初始化
     BubbleAnimalMain.prototype.init = function () {
@@ -74,6 +74,7 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
     //泡泡爆破
     BubbleAnimalMain.prototype.click = function (ani) {
         this.clickNum++;
+        ani.image.off(Laya.Event.CLICK, this, this.click);
         Laya.SoundManager.playMusic("res/audio/21-anidown.mp3", 1);
         ani.image.skin = "BubbleAnimal/ani" + ani.num + "-in1.png";
         ani.brokenBubble.visible = true;

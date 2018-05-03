@@ -17,10 +17,6 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
             {x:721,y:382}
         ]
         this.restart();
-        for(var i = 1;i<6;i++){
-            let btn1 = this.getChildByName("ani"+i+"-2") as Laya.Image;
-            btn1.on(Laya.Event.CLICK,this,this.btnCLick,[i]);
-        }
 
         this.replayon.on(Laya.Event.CLICK,this,this.restart);
     }
@@ -28,6 +24,10 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
     // 游戏重新开始
     private restart() {
         this.init();
+        for(var i = 1;i<6;i++){
+            let btn1 = this.getChildByName("ani"+i+"-2") as Laya.Image;
+            btn1.on(Laya.Event.CLICK,this,this.btnCLick,[i]);
+        }
     }
 
     //初始化
@@ -73,6 +73,7 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
     //泡泡爆破
     public click(ani:Animal){
         this.clickNum++;
+        ani.image.off(Laya.Event.CLICK,this,this.click);
         Laya.SoundManager.playMusic("res/audio/21-anidown.mp3",1);
         ani.image.skin = "BubbleAnimal/ani"+ani.num+"-in1.png";
         ani.brokenBubble.visible = true;
