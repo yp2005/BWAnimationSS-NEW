@@ -18,12 +18,19 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
         var _this = _super.call(this) || this;
         _this.clickNum = 0; //泡泡爆了数量
         _this.goneNum = 0; //动物离开的数量
+        // this.positionArr = [
+        //     {x:42,y:421},
+        //     {x:216,y:459},
+        //     {x:419,y:498},
+        //     {x:602,y:495},
+        //     {x:721,y:382}
+        // ]
         _this.positionArr = [
-            { x: 42, y: 421 },
-            { x: 216, y: 459 },
-            { x: 419, y: 498 },
-            { x: 602, y: 495 },
-            { x: 721, y: 382 }
+            { x: 42, y: 171 },
+            { x: 386, y: 209 },
+            { x: 219, y: 238 },
+            { x: 782, y: 205 },
+            { x: 541, y: 132 }
         ];
         _this.restart();
         _this.replayon.on(Laya.Event.CLICK, _this, _this.restart);
@@ -47,13 +54,13 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
         for (var i = 1; i < 6; i++) {
             var ani = new Animal(ranArr1[i - 1]);
             ani.x = 150 + (i - 1) * 150;
-            ani.y = 150;
+            ani.y = 500;
             ani.image.on(Laya.Event.CLICK, this, this.click, [ani]);
             ani.shake1();
             this.addChild(ani);
             var ani2 = new Animal(ranArr2[i - 1]);
             ani2.x = 150 + (i - 1) * 150;
-            ani2.y = 300;
+            ani2.y = 650;
             ani2.image.on(Laya.Event.CLICK, this, this.click, [ani2]);
             ani2.shake1();
             this.addChild(ani2);
@@ -124,9 +131,9 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
         Laya.timer.once(2000, this, function () {
             this.polly.visible = false;
             Laya.timer.clear(this, this.onLoop);
+            this.replaydown.visible = false;
+            this.replayon.visible = true;
         });
-        this.replaydown.visible = false;
-        this.replayon.visible = true;
     };
     //鹦鹉飞走动画loop
     BubbleAnimalMain.prototype.onLoop = function () {

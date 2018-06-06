@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":5,
+    "selecteID":10,
     "props":{"width":1024,"sceneColor":"#000000","height":768},
     "nodeParent":-1,
     "label":"View",
@@ -67,7 +67,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":421,"x":42,"skin":"BubbleAnimal/ani1-2.png","name":"ani1-2"},
+            "props":{"y":171,"x":42,"skin":"BubbleAnimal/ani1-2.png","name":"ani1-2"},
             "nodeParent":1,
             "label":"Image(ani1-2)",
             "isDirectory":false,
@@ -80,7 +80,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":459,"x":216,"skin":"BubbleAnimal/ani2-2.png","name":"ani2-2"},
+            "props":{"y":209,"x":386,"skin":"BubbleAnimal/ani2-2.png","name":"ani2-2"},
             "nodeParent":1,
             "label":"Image(ani2-2)",
             "isDirectory":false,
@@ -93,7 +93,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":498,"x":419,"skin":"BubbleAnimal/ani3-2.png","name":"ani3-2"},
+            "props":{"y":238,"x":219,"skin":"BubbleAnimal/ani3-2.png","name":"ani3-2"},
             "nodeParent":1,
             "label":"Image(ani3-2)",
             "isDirectory":false,
@@ -106,7 +106,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":495,"x":602,"skin":"BubbleAnimal/ani4-2.png","name":"ani4-2"},
+            "props":{"y":205,"x":782,"skin":"BubbleAnimal/ani4-2.png","name":"ani4-2"},
             "nodeParent":1,
             "label":"Image(ani4-2)",
             "isDirectory":false,
@@ -119,7 +119,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":382,"x":721,"skin":"BubbleAnimal/ani5-2.png","name":"ani5-2"},
+            "props":{"y":132,"x":541,"skin":"BubbleAnimal/ani5-2.png","name":"ani5-2"},
             "nodeParent":1,
             "label":"Image(ani5-2)",
             "isDirectory":false,
@@ -132,7 +132,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":453,"x":762,"skin":"BubbleAnimal/ani5-1.png","name":"ani5-1"},
+            "props":{"y":203,"x":581,"skin":"BubbleAnimal/ani5-1.png","name":"ani5-1"},
             "nodeParent":1,
             "label":"Image(ani5-1)",
             "isDirectory":false,
@@ -145,7 +145,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":482,"x":53,"skin":"BubbleAnimal/ani1-1.png","name":"ani1-1"},
+            "props":{"y":231,"x":53,"skin":"BubbleAnimal/ani1-1.png","name":"ani1-1"},
             "nodeParent":1,
             "label":"Image(ani1-1)",
             "isDirectory":false,
@@ -158,7 +158,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":505,"x":262,"skin":"BubbleAnimal/ani2-1.png","name":"ani2-1"},
+            "props":{"y":256,"x":432,"skin":"BubbleAnimal/ani2-1.png","name":"ani2-1"},
             "nodeParent":1,
             "label":"Image(ani2-1)",
             "isDirectory":false,
@@ -171,7 +171,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":565,"x":419,"skin":"BubbleAnimal/ani3-1.png","name":"ani3-1"},
+            "props":{"y":305,"x":219,"skin":"BubbleAnimal/ani3-1.png","name":"ani3-1"},
             "nodeParent":1,
             "label":"Image(ani3-1)",
             "isDirectory":false,
@@ -184,7 +184,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":559,"x":602,"skin":"BubbleAnimal/ani4-1.png","name":"ani4-1"},
+            "props":{"y":268,"x":782,"skin":"BubbleAnimal/ani4-1.png","name":"ani4-1"},
             "nodeParent":1,
             "label":"Image(ani4-1)",
             "isDirectory":false,
