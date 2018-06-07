@@ -204,7 +204,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":497,"x":59,"var":"tiger1","skin":"DragAnimal/tiger1.png"},
+            "props":{"y":514,"x":56,"var":"tiger1","skin":"DragAnimal/tiger1.png"},
             "nodeParent":1,
             "label":"Image(tiger1)",
             "isDirectory":false,
@@ -230,7 +230,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":208,"x":132,"var":"elephant1","skin":"DragAnimal/elephant1.png"},
+            "props":{"y":255,"x":132,"var":"elephant1","skin":"DragAnimal/elephant1.png"},
             "nodeParent":1,
             "label":"Image(elephant1)",
             "isDirectory":false,
@@ -243,7 +243,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":286,"x":412,"var":"elephant2","skin":"DragAnimal/elephant2.png"},
+            "props":{"y":302,"x":404,"var":"elephant2","skin":"DragAnimal/elephant2.png"},
             "nodeParent":1,
             "label":"Image(elephant2)",
             "isDirectory":false,
@@ -269,7 +269,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":374,"x":805,"var":"snake3","skin":"DragAnimal/snake3.png"},
+            "props":{"y":407,"x":805,"var":"snake3","skin":"DragAnimal/snake3.png"},
             "nodeParent":1,
             "label":"Image(snake3)",
             "isDirectory":false,
@@ -295,7 +295,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":309,"x":910,"var":"spider2","skin":"DragAnimal/spider2.png"},
+            "props":{"y":324,"x":911,"var":"spider2","skin":"DragAnimal/spider2.png"},
             "nodeParent":1,
             "label":"Image(spider2)",
             "isDirectory":false,
@@ -308,7 +308,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":330,"x":662,"var":"tiger2","skin":"DragAnimal/tiger2.png"},
+            "props":{"y":344,"x":662,"var":"tiger2","skin":"DragAnimal/tiger2.png"},
             "nodeParent":1,
             "label":"Image(tiger2)",
             "isDirectory":false,
