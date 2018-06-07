@@ -14,6 +14,11 @@ var Animal = /** @class */ (function (_super) {
     function Animal(num) {
         if (num === void 0) { num = 1; }
         var _this = _super.call(this) || this;
+        _this.topY = 481; // 飘动的边界
+        _this.bottomY = 700; // 飘动的边界
+        _this.leftX = 70; // 飘动的边界
+        _this.rightX = 940; // 飘动的边界
+        _this.goNum = 200; // 飘动的幅度
         _this.num = num;
         _this.isBroken = false;
         _this.clicked = false;
@@ -49,21 +54,38 @@ var Animal = /** @class */ (function (_super) {
     };
     // 飘来
     Animal.prototype.shake1 = function () {
+        //
         if (!this.clicked) {
             this.initX = this.x;
             this.initY = this.y;
-            var _x = (Math.random() - 0.5) * 20;
-            var _y = (Math.random() - 0.5) * 20;
-            this.curAni = Laya.Tween.to(this, { x: this.initX + _x, y: this.initY + _y }, 1000, null, Laya.Handler.create(this, this.shake2));
+            var _x = (Math.random() - 0.5) * this.goNum;
+            var _y = (Math.random() - 0.5) * this.goNum;
+            var goX = this.getLimitXY(true, _x);
+            var goY = this.getLimitXY(false, _y);
+            this.curAni = Laya.Tween.to(this, { x: goX, y: goY }, 4000, null, Laya.Handler.create(this, this.shake2));
         }
     };
     // 飘去
     Animal.prototype.shake2 = function () {
         if (!this.clicked) {
-            var _x = (Math.random() - 0.5) * 20;
-            var _y = (Math.random() - 0.5) * 20;
-            this.curAni = Laya.Tween.to(this, { x: this.initX + _x, y: this.initY + _y }, 1000, null, Laya.Handler.create(this, this.shake1));
+            var _x = (Math.random() - 0.5) * this.goNum;
+            var _y = (Math.random() - 0.5) * this.goNum;
+            var goX = this.getLimitXY(true, _x);
+            var goY = this.getLimitXY(false, _y);
+            this.curAni = Laya.Tween.to(this, { x: goX, y: goY }, 4000, null, Laya.Handler.create(this, this.shake1));
         }
+    };
+    Animal.prototype.getLimitXY = function (isX, xy) {
+        var result = isX ? (this.initX + xy) : (this.initY + xy);
+        if (isX) {
+            result = Math.min(this.rightX, result);
+            result = Math.max(this.leftX, result);
+        }
+        else {
+            result = Math.min(this.bottomY, result);
+            result = Math.max(this.topY, result);
+        }
+        return result;
     };
     return Animal;
 }(Laya.Sprite));
