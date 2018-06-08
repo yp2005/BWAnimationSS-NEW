@@ -1,12 +1,9 @@
 // 游戏主界面
 class DragAnimalMain extends ui.DragAnimalUI {
     private animals: Laya.Image[] = new Array<Laya.Image>(); // 所有动物图片
-    private partAnimals: Laya.Image[] = new Array<Laya.Image>(); // 可以交换位置的动物图片
-    private partAnimalsPos: any[] = new Array<any>(); // 可以交换位置的动物图片的坐标
-    private otherAnimalsPos: any[] = new Array<any>(); // 不可以交换位置的动物图片的坐标
-    private curAnimal: Laya.Image; // 当前拖动的动物
-    private curAnimalXY: any; // 当前拖拽的动物的原始坐标
+    private animalPos: any = {}; // 所有动物的初始位置
     private dragedNumber: number = 0; // 拖拽完成的动物数量
+    private curAnimal: Laya.Image; // 正在拖动的动物
     constructor() {
         super(); 
         this.hideSmallPic();
@@ -15,54 +12,31 @@ class DragAnimalMain extends ui.DragAnimalUI {
     // 重置游戏为初始状态
     public reset() {
         this.dragedNumber = 0;
-        this.curAnimal = null;
         this.hideSmallPic();
-        // 动物回到原位
-        this.crocodile1.pos(this.otherAnimalsPos[0].x, this.otherAnimalsPos[0].y);
-        this.crocodile2.pos(this.otherAnimalsPos[1].x, this.otherAnimalsPos[1].y);
-        this.spider1.pos(this.otherAnimalsPos[2].x, this.otherAnimalsPos[2].y);
-        this.spider2.pos(this.otherAnimalsPos[3].x, this.otherAnimalsPos[3].y);
-        for(let i: number = 0; i < 7; i++) {
-            this.partAnimals[i].pos(this.partAnimalsPos[i].x, this.partAnimalsPos[i].y);
-        }
         for(let animal of this.animals) {
+            animal.pos(this.animalPos[animal.skin].x, this.animalPos[animal.skin].y)
             animal.visible = true;
+            animal.on(Laya.Event.MOUSE_DOWN, this, this.startDragAnimal, [animal]);
+            animal.on(Laya.Event.MOUSE_UP, this, this.stopDragAnimal, [animal]);
         }
     }
 
     // 初始化
     public init() {
         this.animals.push(this.crocodile1);
-        this.otherAnimalsPos.push({x: this.crocodile1.x, y: this.crocodile1.y});
         this.animals.push(this.crocodile2);
-        this.otherAnimalsPos.push({x: this.crocodile2.x, y: this.crocodile2.y});
         this.animals.push(this.elephant1);
-        this.partAnimals.push(this.elephant1);
-        this.partAnimalsPos.push({x: this.elephant1.x, y: this.elephant1.y});
         this.animals.push(this.elephant2);
-        this.partAnimals.push(this.elephant2);
-        this.partAnimalsPos.push({x: this.elephant2.x, y: this.elephant2.y});
         this.animals.push(this.snake1);
-        this.partAnimals.push(this.snake1);
-        this.partAnimalsPos.push({x: this.snake1.x, y: this.snake1.y});
         this.animals.push(this.snake2);
-        this.partAnimals.push(this.snake2);
-        this.partAnimalsPos.push({x: this.snake2.x, y: this.snake2.y});
         this.animals.push(this.snake3);
-        this.partAnimals.push(this.snake3);
-        this.partAnimalsPos.push({x: this.snake3.x, y: this.snake3.y});
         this.animals.push(this.spider1);
-        this.otherAnimalsPos.push({x: this.spider1.x, y: this.spider1.y});
         this.animals.push(this.spider2);
-        this.otherAnimalsPos.push({x: this.spider2.x, y: this.spider2.y});
         this.animals.push(this.tiger1);
-        this.partAnimals.push(this.tiger1);
-        this.partAnimalsPos.push({x: this.tiger1.x, y: this.tiger1.y});
         this.animals.push(this.tiger2);
-        this.partAnimals.push(this.tiger2);
-        this.partAnimalsPos.push({x: this.tiger2.x, y: this.tiger2.y});
         
         for(let animal of this.animals) {
+            this.animalPos[animal.skin] = {x: animal.x, y: animal.y};
             animal.on(Laya.Event.MOUSE_DOWN, this, this.startDragAnimal, [animal]);
             animal.on(Laya.Event.MOUSE_UP, this, this.stopDragAnimal, [animal]);
         }
@@ -107,9 +81,8 @@ class DragAnimalMain extends ui.DragAnimalUI {
     private startDragAnimal(animal: Laya.Image) {
         animal.removeSelf();
         this.addChild(animal);
-        this.curAnimal = animal;
-        this.curAnimalXY = {x: animal.x, y: animal.y};
         animal.startDrag();
+        this.curAnimal = animal;
     }
 
     // 拖拽动物结束
@@ -209,7 +182,7 @@ class DragAnimalMain extends ui.DragAnimalUI {
             }
         }
         else {
-            Laya.Tween.to(animal, {x: this.curAnimalXY.x, y: this.curAnimalXY.y}, 200);
+            Laya.Tween.to(animal, {x: this.animalPos[animal.skin].x, y: this.animalPos[animal.skin].y}, 200);
             Laya.SoundManager.playSound("res/audio/drag-fail.mp3", 1);
         }
         if(this.dragedNumber == 11) {
