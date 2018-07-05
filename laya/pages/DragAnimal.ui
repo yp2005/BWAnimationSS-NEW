@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":23,
+    "selecteID":20,
     "props":{"width":1024,"sceneColor":"#ffffff","height":768},
     "nodeParent":-1,
     "label":"View",
@@ -178,7 +178,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":492,"x":530,"var":"crocodile1","skin":"DragAnimal/crocodile1.png"},
+            "props":{"y":490,"x":532,"var":"crocodile1","skin":"DragAnimal/crocodile1.png"},
             "nodeParent":1,
             "label":"Image(crocodile1)",
             "isDirectory":false,
@@ -191,7 +191,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":519,"x":701,"var":"crocodile2","skin":"DragAnimal/crocodile2.png"},
+            "props":{"y":447,"x":729,"var":"crocodile2","skin":"DragAnimal/crocodile2.png"},
             "nodeParent":1,
             "label":"Image(crocodile2)",
             "isDirectory":false,
@@ -204,7 +204,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":514,"x":56,"var":"tiger1","skin":"DragAnimal/tiger1.png"},
+            "props":{"y":512,"x":7,"var":"tiger1","skin":"DragAnimal/tiger1.png"},
             "nodeParent":1,
             "label":"Image(tiger1)",
             "isDirectory":false,
@@ -217,7 +217,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":477,"x":283,"var":"snake2","skin":"DragAnimal/snake2.png"},
+            "props":{"y":521,"x":149,"width":46,"var":"snake2","skin":"DragAnimal/snake2.png","height":54},
             "nodeParent":1,
             "label":"Image(snake2)",
             "isDirectory":false,
@@ -230,7 +230,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":255,"x":132,"var":"elephant1","skin":"DragAnimal/elephant1.png"},
+            "props":{"y":402,"x":200,"var":"elephant1","skin":"DragAnimal/elephant1.png"},
             "nodeParent":1,
             "label":"Image(elephant1)",
             "isDirectory":false,
@@ -243,7 +243,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":302,"x":404,"var":"elephant2","skin":"DragAnimal/elephant2.png"},
+            "props":{"y":368,"x":1,"var":"elephant2","skin":"DragAnimal/elephant2.png"},
             "nodeParent":1,
             "label":"Image(elephant2)",
             "isDirectory":false,
@@ -256,7 +256,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":525,"x":370,"var":"snake1","skin":"DragAnimal/snake1.png"},
+            "props":{"y":538,"x":467,"var":"snake1","skin":"DragAnimal/snake1.png"},
             "nodeParent":1,
             "label":"Image(snake1)",
             "isDirectory":false,
@@ -269,7 +269,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":407,"x":805,"var":"snake3","skin":"DragAnimal/snake3.png"},
+            "props":{"y":579,"x":153,"var":"snake3","skin":"DragAnimal/snake3.png"},
             "nodeParent":1,
             "label":"Image(snake3)",
             "isDirectory":false,
@@ -282,7 +282,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":381,"x":61,"var":"spider1","skin":"DragAnimal/spider1.png"},
+            "props":{"y":506,"x":951,"var":"spider1","skin":"DragAnimal/spider1.png"},
             "nodeParent":1,
             "label":"Image(spider1)",
             "isDirectory":false,
@@ -295,7 +295,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":324,"x":911,"var":"spider2","skin":"DragAnimal/spider2.png"},
+            "props":{"y":341,"x":907,"var":"spider2","skin":"DragAnimal/spider2.png"},
             "nodeParent":1,
             "label":"Image(spider2)",
             "isDirectory":false,
@@ -308,7 +308,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":344,"x":662,"var":"tiger2","skin":"DragAnimal/tiger2.png"},
+            "props":{"y":357,"x":438,"var":"tiger2","skin":"DragAnimal/tiger2.png"},
             "nodeParent":1,
             "label":"Image(tiger2)",
             "isDirectory":false,
@@ -334,7 +334,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":692,"x":120,"width":79,"var":"crocodile2Small","skin":"DragAnimal/crocodile2.png","height":32},
+            "props":{"y":661,"x":133,"width":63,"var":"crocodile2Small","skin":"DragAnimal/crocodile2.png","height":85},
             "nodeParent":1,
             "label":"Image(crocodile2Small)",
             "isDirectory":false,
