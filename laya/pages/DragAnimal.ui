@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":20,
+    "selecteID":18,
     "props":{"width":1024,"sceneColor":"#ffffff","height":768},
     "nodeParent":-1,
     "label":"View",
@@ -30,21 +30,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":666,"x":30,"skin":"DragAnimal/bottom-bg.png"},
-            "nodeParent":1,
-            "label":"Image",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":3,
-            "child":[
-                ],
-            "$LOCKED":true
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":666,"x":228,"skin":"DragAnimal/bottom-bg.png"},
+            "props":{"y":666,"x":67,"skin":"DragAnimal/bottom-bg.png"},
             "nodeParent":1,
             "label":"Image",
             "isDirectory":false,
@@ -53,12 +39,12 @@
             "compId":4,
             "child":[
                 ],
-            "$LOCKED":true
+            "$LOCKED":false
         },
         {
             "x":15,
             "type":"Image",
-            "props":{"y":666,"x":426,"skin":"DragAnimal/bottom-bg.png"},
+            "props":{"y":666,"x":306,"skin":"DragAnimal/bottom-bg.png"},
             "nodeParent":1,
             "label":"Image",
             "isDirectory":false,
@@ -67,12 +53,12 @@
             "compId":5,
             "child":[
                 ],
-            "$LOCKED":true
+            "$LOCKED":false
         },
         {
             "x":15,
             "type":"Image",
-            "props":{"y":666,"x":624,"skin":"DragAnimal/bottom-bg.png"},
+            "props":{"y":666,"x":545,"skin":"DragAnimal/bottom-bg.png"},
             "nodeParent":1,
             "label":"Image",
             "isDirectory":false,
@@ -81,12 +67,12 @@
             "compId":6,
             "child":[
                 ],
-            "$LOCKED":true
+            "$LOCKED":false
         },
         {
             "x":15,
             "type":"Image",
-            "props":{"y":666,"x":822,"skin":"DragAnimal/bottom-bg.png"},
+            "props":{"y":666,"x":784,"skin":"DragAnimal/bottom-bg.png"},
             "nodeParent":1,
             "label":"Image",
             "isDirectory":false,
@@ -95,25 +81,12 @@
             "compId":7,
             "child":[
                 ],
-            "$LOCKED":true
+            "$LOCKED":false
         },
         {
             "x":15,
             "type":"Image",
-            "props":{"y":672,"x":36,"var":"crocodileAudio","skin":"DragAnimal/audio.png"},
-            "nodeParent":1,
-            "label":"Image(crocodileAudio)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":9,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":672,"x":234,"var":"elephantAudio","skin":"DragAnimal/audio.png"},
+            "props":{"y":672,"x":73,"var":"elephantAudio","skin":"DragAnimal/audio.png"},
             "nodeParent":1,
             "label":"Image(elephantAudio)",
             "isDirectory":false,
@@ -126,7 +99,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":673,"x":433,"var":"snakeAudio","skin":"DragAnimal/audio.png"},
+            "props":{"y":673,"x":313,"var":"snakeAudio","skin":"DragAnimal/audio.png"},
             "nodeParent":1,
             "label":"Image(snakeAudio)",
             "isDirectory":false,
@@ -139,7 +112,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":673,"x":632,"var":"spiderAudio","skin":"DragAnimal/audio.png"},
+            "props":{"y":673,"x":553,"var":"spiderAudio","skin":"DragAnimal/audio.png"},
             "nodeParent":1,
             "label":"Image(spiderAudio)",
             "isDirectory":false,
@@ -152,7 +125,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":674,"x":829,"var":"tigerAudio","skin":"DragAnimal/audio.png"},
+            "props":{"y":674,"x":791,"var":"tigerAudio","skin":"DragAnimal/audio.png"},
             "nodeParent":1,
             "label":"Image(tigerAudio)",
             "isDirectory":false,
@@ -178,33 +151,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":490,"x":532,"var":"crocodile1","skin":"DragAnimal/crocodile1.png"},
-            "nodeParent":1,
-            "label":"Image(crocodile1)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":15,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":447,"x":729,"var":"crocodile2","skin":"DragAnimal/crocodile2.png"},
-            "nodeParent":1,
-            "label":"Image(crocodile2)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":16,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":512,"x":7,"var":"tiger1","skin":"DragAnimal/tiger1.png"},
+            "props":{"y":512,"x":10,"var":"tiger1","skin":"DragAnimal/tiger1.png"},
             "nodeParent":1,
             "label":"Image(tiger1)",
             "isDirectory":false,
@@ -217,7 +164,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":521,"x":149,"width":46,"var":"snake2","skin":"DragAnimal/snake2.png","height":54},
+            "props":{"y":453,"x":611,"width":46,"var":"snake2","skin":"DragAnimal/snake2.png","height":54},
             "nodeParent":1,
             "label":"Image(snake2)",
             "isDirectory":false,
@@ -230,7 +177,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":402,"x":200,"var":"elephant1","skin":"DragAnimal/elephant1.png"},
+            "props":{"y":362,"x":284,"var":"elephant1","skin":"DragAnimal/elephant1.png"},
             "nodeParent":1,
             "label":"Image(elephant1)",
             "isDirectory":false,
@@ -243,7 +190,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":368,"x":1,"var":"elephant2","skin":"DragAnimal/elephant2.png"},
+            "props":{"y":376,"x":69,"var":"elephant2","skin":"DragAnimal/elephant2.png"},
             "nodeParent":1,
             "label":"Image(elephant2)",
             "isDirectory":false,
@@ -256,7 +203,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":538,"x":467,"var":"snake1","skin":"DragAnimal/snake1.png"},
+            "props":{"y":535,"x":457,"var":"snake1","skin":"DragAnimal/snake1.png"},
             "nodeParent":1,
             "label":"Image(snake1)",
             "isDirectory":false,
@@ -269,7 +216,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":579,"x":153,"var":"snake3","skin":"DragAnimal/snake3.png"},
+            "props":{"y":569,"x":244,"var":"snake3","skin":"DragAnimal/snake3.png"},
             "nodeParent":1,
             "label":"Image(snake3)",
             "isDirectory":false,
@@ -308,7 +255,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":357,"x":438,"var":"tiger2","skin":"DragAnimal/tiger2.png"},
+            "props":{"y":401,"x":737,"var":"tiger2","skin":"DragAnimal/tiger2.png"},
             "nodeParent":1,
             "label":"Image(tiger2)",
             "isDirectory":false,
@@ -321,33 +268,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":678,"x":67,"width":70,"var":"crocodile1Small","skin":"DragAnimal/crocodile1.png","height":58},
-            "nodeParent":1,
-            "label":"Image(crocodile1Small)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":29,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":661,"x":133,"width":63,"var":"crocodile2Small","skin":"DragAnimal/crocodile2.png","height":85},
-            "nodeParent":1,
-            "label":"Image(crocodile2Small)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":30,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":674,"x":258,"width":72,"var":"elephant1Small","skin":"DragAnimal/elephant1.png","height":52},
+            "props":{"y":674,"x":97,"width":72,"var":"elephant1Small","skin":"DragAnimal/elephant1.png","height":52},
             "nodeParent":1,
             "label":"Image(elephant1Small)",
             "isDirectory":false,
@@ -360,7 +281,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":679,"x":327,"width":68,"var":"elephant2Small","skin":"DragAnimal/elephant2.png","height":45},
+            "props":{"y":679,"x":166,"width":68,"var":"elephant2Small","skin":"DragAnimal/elephant2.png","height":45},
             "nodeParent":1,
             "label":"Image(elephant2Small)",
             "isDirectory":false,
@@ -373,7 +294,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":690,"x":508,"width":40,"var":"snake1Small","skin":"DragAnimal/snake1.png","height":45},
+            "props":{"y":690,"x":388,"width":40,"var":"snake1Small","skin":"DragAnimal/snake1.png","height":45},
             "nodeParent":1,
             "label":"Image(snake1Small)",
             "isDirectory":false,
@@ -386,7 +307,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":677,"x":464,"width":37,"var":"snake2Small","skin":"DragAnimal/snake2.png","height":45},
+            "props":{"y":677,"x":344,"width":37,"var":"snake2Small","skin":"DragAnimal/snake2.png","height":45},
             "nodeParent":1,
             "label":"Image(snake2Small)",
             "isDirectory":false,
@@ -399,7 +320,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":669,"x":523,"width":71,"var":"snake3Small","skin":"DragAnimal/snake3.png","height":41},
+            "props":{"y":669,"x":403,"width":71,"var":"snake3Small","skin":"DragAnimal/snake3.png","height":41},
             "nodeParent":1,
             "label":"Image(snake3Small)",
             "isDirectory":false,
@@ -412,7 +333,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":684,"x":679,"width":34,"var":"spider1Small","skin":"DragAnimal/spider1.png","height":37},
+            "props":{"y":684,"x":600,"width":34,"var":"spider1Small","skin":"DragAnimal/spider1.png","height":37},
             "nodeParent":1,
             "label":"Image(spider1Small)",
             "isDirectory":false,
@@ -425,7 +346,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":658,"x":718,"width":68,"var":"spider2Small","skin":"DragAnimal/spider2.png","height":71},
+            "props":{"y":658,"x":639,"width":68,"var":"spider2Small","skin":"DragAnimal/spider2.png","height":71},
             "nodeParent":1,
             "label":"Image(spider2Small)",
             "isDirectory":false,
@@ -438,7 +359,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":668,"x":921,"width":70,"var":"tiger1Small","skin":"DragAnimal/tiger1.png","height":51},
+            "props":{"y":668,"x":883,"width":70,"var":"tiger1Small","skin":"DragAnimal/tiger1.png","height":51},
             "nodeParent":1,
             "label":"Image(tiger1Small)",
             "isDirectory":false,
@@ -451,7 +372,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":686,"x":859,"width":64,"var":"tiger2Small","skin":"DragAnimal/tiger2.png","height":50},
+            "props":{"y":686,"x":821,"width":64,"var":"tiger2Small","skin":"DragAnimal/tiger2.png","height":50},
             "nodeParent":1,
             "label":"Image(tiger2Small)",
             "isDirectory":false,
