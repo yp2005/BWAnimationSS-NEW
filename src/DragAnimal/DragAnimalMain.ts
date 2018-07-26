@@ -8,7 +8,7 @@ class DragAnimalMain extends ui.DragAnimalUI {
     constructor() {
         super(); 
         this.hideSmallPic();
-    }
+    }   
 
     // 重置游戏为初始状态
     public reset() {
