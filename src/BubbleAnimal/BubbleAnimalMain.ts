@@ -17,11 +17,10 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
         //     {x:721,y:382}
         // ]
         this.positionArr = [
-            {x:42,y:171},
-            {x:386,y:209},
-            {x:219,y:238},
-            {x:782,y:205},
-            {x:541,y:132}
+            {x:82,y:171},
+            {x:441,y:132},
+            {x:259,y:238},
+            {x:682,y:205}
         ]
         this.restart();
 
@@ -31,7 +30,7 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
     // 游戏重新开始
     private restart() {
         this.init();
-        for(var i = 1;i<6;i++){
+        for(var i = 1;i<5;i++){
             let btn1 = this.getChildByName("ani"+i+"-2") as Laya.Image;
             btn1.on(Laya.Event.CLICK,this,this.btnCLick,[i]);
         }
@@ -41,11 +40,11 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
     public init(){
         this.clickNum = 0;
         this.goneNum = 0;
-        let ranArr1 = this.getRandomArr(5);
-        let ranArr2 = this.getRandomArr(5);
+        let ranArr1 = this.getRandomArr(4);
+        let ranArr2 = this.getRandomArr(4);
 
         //生成10个泡泡
-        for(var i = 1;i<6;i++){
+        for(var i = 1;i<5;i++){
             let ani = new Animal(ranArr1[i-1]);
             ani.x = 150+(i-1)*150;
             ani.y = 500;
@@ -108,7 +107,7 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
 
     //地上动物离开
     public btnCLick(num:number){
-        if(this.clickNum < 10) return;
+        if(this.clickNum < 8) return;
         let btn1 = this.getChildByName("ani"+num+"-2") as Laya.Image;
             btn1.off(Laya.Event.CLICK,this,this.btnCLick);
         Laya.SoundManager.playMusic("res/audio/21-aniout.mp3",1);
@@ -117,7 +116,7 @@ class BubbleAnimalMain extends ui.BubbleAnimalUI {
         Laya.timer.once(2000,this,function(){
             this.goneNum++;
             btn1.visible =false;
-            if(this.goneNum > 4){
+            if(this.goneNum > 3){
                 this.wingame();
             }
         });

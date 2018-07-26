@@ -4,10 +4,10 @@ P 5EC3EB94 ani1-1.png
 P 675E67AE ani1-2.png
 P 3F250247 ani1-in1.png
 P 7C039279 ani1-in2.png
-P 2155EE59 ani2-1.png
-P 84FC75B4 ani2-2.png
-P 1CBE1B66 ani2-in1.png
-P 4A236810 ani2-in2.png
+P DD2508B0 ani2-1.png
+P 7A7EB4BB ani2-2.png
+P DF6F5162 ani2-in1.png
+P 66342165 ani2-in2.png
 P 0DA8CB79 ani3-1.png
 P B1625A97 ani3-2.png
 P A452C6EA ani3-in1.png
@@ -16,10 +16,6 @@ P BD5EFC4C ani4-1.png
 P DC78A8F5 ani4-2.png
 P D348B9D3 ani4-in1.png
 P D9905F34 ani4-in2.png
-P DD2508B0 ani5-1.png
-P 7A7EB4BB ani5-2.png
-P DF6F5162 ani5-in1.png
-P 66342165 ani5-in2.png
 R 7EDCDDA1 bg.png
 R 6B1C7DEE bg1.png
 P A659A790 bubble1.png
@@ -35,11 +31,9 @@ P DD1A7E9B replay-disabled.png
 D DragAnimal
 P 6945C726 audio.png
 P 56C49648 bottom-bg.png
-P 8058F81F crocodile1.png
-P 580094EB crocodile2.png
 P F7759062 elephant1.png
 P 8FD72E2F elephant2.png
-R EEAAAC6D main-bg.png
+R 962AD3F3 main-bg.png
 P 72E61C0B snake1.png
 P 73EA6602 snake2.png
 P 8DE7C966 snake3.png
@@ -49,6 +43,7 @@ P 9758B71D tiger1.png
 P ABDCDD3E tiger2.png
 D RunRace
 R C61DA4E1 bg.png
+R 0C826BCF bg4.png
 P 6A42E391 fans-cat-1.png
 P 712753B5 fans-cat-2.png
 P 226D25D9 fans-robbit-1.png
@@ -62,12 +57,9 @@ P 52A0D9E2 player2.png
 P 031A1EF1 player3-btn1.png
 P 3A5D1B92 player3-btn2.png
 P FC490E3B player3.png
-P D8E38247 player4-btn1.png
-P 9D6E07D3 player4-btn2.png
-P 5B91BDAC player4.png
-P 47864828 player5-btn1.png
-P 307BC6E7 player5-btn2.png
-P C3DE6E60 player5.png
+P 47864828 player4-btn1.png
+P 307BC6E7 player4-btn2.png
+P C3DE6E60 player4.png
 P F518F62A replay1.png
 P 90A8816D replay2.png
 P CD43D808 start.png

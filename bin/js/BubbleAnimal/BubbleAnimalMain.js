@@ -26,11 +26,10 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
         //     {x:721,y:382}
         // ]
         _this.positionArr = [
-            { x: 42, y: 171 },
-            { x: 386, y: 209 },
-            { x: 219, y: 238 },
-            { x: 782, y: 205 },
-            { x: 541, y: 132 }
+            { x: 82, y: 171 },
+            { x: 441, y: 132 },
+            { x: 259, y: 238 },
+            { x: 682, y: 205 }
         ];
         _this.restart();
         _this.replayon.on(Laya.Event.CLICK, _this, _this.restart);
@@ -39,7 +38,7 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
     // 游戏重新开始
     BubbleAnimalMain.prototype.restart = function () {
         this.init();
-        for (var i = 1; i < 6; i++) {
+        for (var i = 1; i < 5; i++) {
             var btn1 = this.getChildByName("ani" + i + "-2");
             btn1.on(Laya.Event.CLICK, this, this.btnCLick, [i]);
         }
@@ -48,10 +47,10 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
     BubbleAnimalMain.prototype.init = function () {
         this.clickNum = 0;
         this.goneNum = 0;
-        var ranArr1 = this.getRandomArr(5);
-        var ranArr2 = this.getRandomArr(5);
+        var ranArr1 = this.getRandomArr(4);
+        var ranArr2 = this.getRandomArr(4);
         //生成10个泡泡
-        for (var i = 1; i < 6; i++) {
+        for (var i = 1; i < 5; i++) {
             var ani = new Animal(ranArr1[i - 1]);
             ani.x = 150 + (i - 1) * 150;
             ani.y = 500;
@@ -108,7 +107,7 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
     };
     //地上动物离开
     BubbleAnimalMain.prototype.btnCLick = function (num) {
-        if (this.clickNum < 10)
+        if (this.clickNum < 8)
             return;
         var btn1 = this.getChildByName("ani" + num + "-2");
         btn1.off(Laya.Event.CLICK, this, this.btnCLick);
@@ -117,7 +116,7 @@ var BubbleAnimalMain = /** @class */ (function (_super) {
         Laya.timer.once(2000, this, function () {
             this.goneNum++;
             btn1.visible = false;
-            if (this.goneNum > 4) {
+            if (this.goneNum > 3) {
                 this.wingame();
             }
         });

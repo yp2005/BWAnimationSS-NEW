@@ -9,7 +9,7 @@ class RunRaceMain extends ui.RunRaceUI {
     constructor() {
         super(); 
         this.restart();
-        for(var i = 1;i<6;i++){
+        for(var i = 1;i<5;i++){
             let btn1 = this.btnbox.getChildByName("btn-player"+i) as Laya.Image;
             btn1.on(Laya.Event.CLICK,this,this.btnCLick,[i]);
         }
@@ -31,7 +31,7 @@ class RunRaceMain extends ui.RunRaceUI {
         this.winner.visible = false;
         Laya.timer.clear(this,this.onLoop);
 
-        for(var i = 1;i<6;i++){
+        for(var i = 1;i<5;i++){
             let player = this.getChildByName("player"+i) as Laya.Image;
             player.x = 0;
 
@@ -55,7 +55,7 @@ class RunRaceMain extends ui.RunRaceUI {
             this.resetLoop();
             this.isGo = true;
 
-            for(var i = 1;i<6;i++){
+            for(var i = 1;i<5;i++){
                 let btn1 = this.btnbox.getChildByName("btn-player"+i) as Laya.Image;
                 let btn2 = this.btnbox.getChildByName("btn2-player"+i) as Laya.Image;
                 btn1.visible = true;
@@ -112,7 +112,7 @@ class RunRaceMain extends ui.RunRaceUI {
         this.resetLoop();
         Laya.SoundManager.playMusic("res/audio/19-fans.mp3",1);
 
-        for(var i = 1;i<6;i++){
+        for(var i = 1;i<5;i++){
             let player = this.getChildByName("player"+i) as Laya.Image;
             // let winner = player.getChildByName("winner") as Laya.Image;
             //     winner.visible = false;

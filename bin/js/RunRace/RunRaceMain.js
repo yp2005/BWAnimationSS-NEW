@@ -19,7 +19,7 @@ var RunRaceMain = /** @class */ (function (_super) {
         _this.speed = 50; // 拉拉队速度
         _this.isGo = false;
         _this.restart();
-        for (var i = 1; i < 6; i++) {
+        for (var i = 1; i < 5; i++) {
             var btn1 = _this.btnbox.getChildByName("btn-player" + i);
             btn1.on(Laya.Event.CLICK, _this, _this.btnCLick, [i]);
         }
@@ -38,7 +38,7 @@ var RunRaceMain = /** @class */ (function (_super) {
         this.readygo.visible = false;
         this.winner.visible = false;
         Laya.timer.clear(this, this.onLoop);
-        for (var i = 1; i < 6; i++) {
+        for (var i = 1; i < 5; i++) {
             var player = this.getChildByName("player" + i);
             player.x = 0;
             var btn1 = this.btnbox.getChildByName("btn-player" + i);
@@ -58,7 +58,7 @@ var RunRaceMain = /** @class */ (function (_super) {
             this.readygo.visible = false;
             this.resetLoop();
             this.isGo = true;
-            for (var i = 1; i < 6; i++) {
+            for (var i = 1; i < 5; i++) {
                 var btn1 = this.btnbox.getChildByName("btn-player" + i);
                 var btn2 = this.btnbox.getChildByName("btn2-player" + i);
                 btn1.visible = true;
@@ -109,7 +109,7 @@ var RunRaceMain = /** @class */ (function (_super) {
         this.speed = 25;
         this.resetLoop();
         Laya.SoundManager.playMusic("res/audio/19-fans.mp3", 1);
-        for (var i = 1; i < 6; i++) {
+        for (var i = 1; i < 5; i++) {
             var player = this.getChildByName("player" + i);
             // let winner = player.getChildByName("winner") as Laya.Image;
             //     winner.visible = false;
