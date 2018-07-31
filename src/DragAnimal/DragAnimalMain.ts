@@ -3,7 +3,7 @@ class DragAnimalMain extends ui.DragAnimalUI {
     private animals: Laya.Image[] = new Array<Laya.Image>(); // 所有动物图片
     private animalPos: any = {}; // 所有动物的初始位置
     private dragedNumber: number = 0; // 拖拽完成的动物数量
-    private curAnimal: string; // 当前匹配的动物
+    private curAnimal: string = null; // 当前匹配的动物
     constructor() {
         super(); 
         this.hideSmallPic();
@@ -12,6 +12,7 @@ class DragAnimalMain extends ui.DragAnimalUI {
     // 重置游戏为初始状态
     public reset() {
         this.dragedNumber = 0;
+        this.curAnimal = null;
         this.hideSmallPic();
         for(let animal of this.animals) {
             animal.pos(this.animalPos[animal.skin].x, this.animalPos[animal.skin].y);
@@ -59,7 +60,7 @@ class DragAnimalMain extends ui.DragAnimalUI {
     }
 
     private match(animal: Laya.Image) { // 点击声音和图片后进行匹配
-        if(animal.skin.indexOf(this.curAnimal) != -1) { // 根据图片名称和动物名称进行匹配
+        if(this.curAnimal != null && animal.skin.indexOf(this.curAnimal) != -1) { // 根据图片名称和动物名称进行匹配
             Laya.SoundManager.playSound("res/audio/" + this.curAnimal + ".mp3", 1);
             this.dragedNumber++;
             let animalName = animal.skin.substring(animal.skin.lastIndexOf("/") + 1, animal.skin.lastIndexOf("."))
