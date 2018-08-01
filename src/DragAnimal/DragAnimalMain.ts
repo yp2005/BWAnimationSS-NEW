@@ -60,6 +60,7 @@ class DragAnimalMain extends ui.DragAnimalUI {
     }
 
     private match(animal: Laya.Image) { // 点击声音和图片后进行匹配
+        animal.off(Laya.Event.CLICK, this, this.match);
         if(this.curAnimal != null && animal.skin.indexOf(this.curAnimal) != -1) { // 根据图片名称和动物名称进行匹配
             Laya.SoundManager.playSound("res/audio/" + this.curAnimal + ".mp3", 1);
             this.dragedNumber++;
@@ -87,7 +88,9 @@ class DragAnimalMain extends ui.DragAnimalUI {
                     }));
                 }));
             }));
-
+            Laya.timer.once(300, this, function() {
+                animal.on(Laya.Event.CLICK, this, this.match, [animal]);
+            });
         }
         if(this.dragedNumber == 9) { // 如果动物全部匹配完成，播放完成音效结束游戏
             Laya.timer.once(800, this, function() {
